@@ -1,0 +1,6 @@
+You need to add the following image files in this directory:
+
+1. background-placeholder.jpg - For the full-screen background
+2. project-placeholder.jpg - For project thumbnails
+
+You can use your own photos or free stock images from sites like Unsplash or Pexels.
