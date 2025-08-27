@@ -30,7 +30,6 @@ This is my personal portfolio website showcasing my skills, projects, and contac
 2. Push this code to the repository
 3. Go to repository Settings > Pages
 4. Select the main branch as the source
-5. Your site will be published at https://michealamanya.github.io/[repository-name]/
 
 ## License
 

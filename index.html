@@ -3,7 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Micheal Amanya - Portfolio</title>
+    <title>Micheal Amanya - Software Developer & Computer Science Student</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Micheal Amanya is a Computer Science student and developer specializing in AI, web development, and mobile applications.">
+    <meta name="keywords" content="software developer, computer science, AI, web development, Uganda, Mbarara University">
+    <meta name="author" content="Micheal Amanya">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Micheal Amanya - Software Developer Portfolio">
+    <meta property="og:description" content="Computer Science student specializing in AI, web and mobile applications.">
+    <meta property="og:image" content="https://michealamanya.github.io/images/profile.jpg">
+    <meta property="og:url" content="https://michealamanya.github.io">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- Existing CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,6 +34,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@5.3.6/dist/simplebar.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <link rel="stylesheet" href="css/ui-enhancements.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
 </head>
 <body class="light-theme">
     <!-- Preloader -->
@@ -35,9 +55,12 @@
             <ul class="nav-links">
                 <li><a href="#home" data-tippy-content="Home Section">Home</a></li>
                 <li><a href="#about" data-tippy-content="Learn About Me">About</a></li>
+                <li><a href="#services" data-tippy-content="My Services">Services</a></li>
                 <li><a href="#skills" data-tippy-content="My Technical Skills">Skills</a></li>
                 <li><a href="#cv" data-tippy-content="My Resume">CV</a></li>
                 <li><a href="#projects" data-tippy-content="My Portfolio Work">Projects</a></li>
+                <li><a href="#certifications" data-tippy-content="My Certifications">Certifications</a></li>
+                <li><a href="#blog" data-tippy-content="My Blog">Blog</a></li>
                 <li><a href="#testimonials" data-tippy-content="What Others Say">Testimonials</a></li>
                 <li><a href="#contact" data-tippy-content="Get in Touch">Contact</a></li>
             </ul>
@@ -52,9 +75,32 @@
     <!-- Home Section -->
     <section id="home" class="section" data-aos="fade-up">
         <div class="glass-card hero-card">
+            <div class="profile-image">
+                <img src="images/profile.jpg" alt="Micheal Amanya">
+            </div>
+            <div class="availability-badge" id="availability-status">
+                <span class="pulse-dot"></span> Available for new projects
+            </div>
             <h1>Hi, I'm <span class="highlight">Micheal Amanya</span></h1>
             <p class="hero-text" data-aos="fade-up" data-aos-delay="200">I am a <span id="typing-text"></span><span class="typing-cursor">|</span></p>
-            <a href="#about" class="btn-primary" data-aos="fade-up" data-aos-delay="400">Get to know me</a>
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+                <a href="#about" class="btn-primary">Get to know me</a>
+                <a href="#contact" class="btn-secondary">Hire me</a>
+            </div>
+            <div class="professional-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="3">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="15">0</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="8">0</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -72,15 +118,15 @@
                         <h3>Languages I Speak</h3>
                         <div class="languages-list">
                             <div class="language-item">
-                                <img src="images/flag-en.jpg" alt="English Flag" class="language-flag">
+                                <img src="images/flags/flag-en.jpg" alt="English Flag" class="language-flag">
                                 <span>English (Fluent)</span>
                             </div>
                             <div class="language-item">
-                                <img src="images/flag-ug.jpg" alt="Uganda Flag" class="language-flag">
-                                <span>runyankole (Native)</span>
+                                <img src="images/flags/flag-ug.jpg" alt="Uganda Flag" class="language-flag">
+                                <span>Runyankole (Native)</span>
                             </div>
                             <div class="language-item">
-                                <img src="images/flag-ug.jpg" alt="Uganda Flag" class="language-flag">
+                                <img src="images/flags/flag-ug.jpg" alt="Uganda Flag" class="language-flag">
                                 <span>Luganda (Conversational)</span>
                             </div>
                         </div>
@@ -113,6 +159,74 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section" data-aos="fade-up">
+        <div class="glass-card">
+            <h2>My Services & Expertise</h2>
+            <div class="services-container">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Creating responsive, accessible, and performant web applications using modern frameworks and best practices.</p>
+                    <ul class="service-list">
+                        <li>Custom Website Development</li>
+                        <li>Frontend & Backend Solutions</li>
+                        <li>API Development & Integration</li>
+                        <li>Website Maintenance & Support</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Development</h3>
+                    <p>Building cross-platform mobile applications with intuitive interfaces and powerful functionality.</p>
+                    <ul class="service-list">
+                        <li>Native & Cross-platform Apps</li>
+                        <li>App UI/UX Design</li>
+                        <li>App Performance Optimization</li>
+                        <li>App Testing & Deployment</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Developing intelligent systems that learn from data and improve over time to solve complex problems.</p>
+                    <ul class="service-list">
+                        <li>Data Analysis & Visualization</li>
+                        <li>Predictive Models</li>
+                        <li>Natural Language Processing</li>
+                        <li>Computer Vision Solutions</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Design</h3>
+                    <p>Creating efficient, scalable, and secure database architectures to manage your critical data.</p>
+                    <ul class="service-list">
+                        <li>Database Modeling & Architecture</li>
+                        <li>SQL & NoSQL Solutions</li>
+                        <li>Data Migration & Integration</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="cta-container">
+                <a href="#contact" class="btn-primary">Request Custom Service</a>
             </div>
         </div>
     </section>
@@ -187,6 +301,49 @@
                 <p>MySQL</p>
                 <div class="skill-progress-container">
                     <div class="skill-progress" data-percent="75"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Professional Timeline Section -->
+<section id="timeline" class="section" data-aos="fade-up">
+    <div class="glass-card">
+        <h2>Professional Journey</h2>
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2023 - Present</div>
+                <div class="timeline-content">
+                    <h3>Computer Science Student</h3>
+                    <h4>Mbarara University of Science and Technology</h4>
+                    <p>Pursuing a Bachelor's degree in Computer Science with focus on AI, algorithms, and software engineering.</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2022 - 2023</div>
+                <div class="timeline-content">
+                    <h3>Freelance Developer</h3>
+                    <h4>Self-employed</h4>
+                    <p>Developed websites and applications for local businesses while improving my technical skills.</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2022</div>
+                <div class="timeline-content">
+                    <h3>High School Graduate</h3>
+                    <h4>St. Thomas Vocational Secondary School</h4>
+                    <p>Completed UACE with focus on science subjects, laying the foundation for my technical education.</p>
                 </div>
             </div>
         </div>
@@ -284,6 +441,59 @@
     </div>
 </section>
 
+<!-- Certifications Section -->
+<section id="certifications" class="section" data-aos="fade-up">
+    <div class="glass-card">
+        <h2>Certifications & Training</h2>
+        <div class="certifications-container">
+            <div class="certification-card" data-aos="flip-up" data-aos-delay="100">
+                <div class="certification-logo">
+                    <img src="images/certifications/cert-python.jpg" alt="Python Certification">
+                </div>
+                <div class="certification-info">
+                    <h3>Python for Data Science</h3>
+                    <p class="certification-provider">Coursera - IBM</p>
+                    <p class="certification-date">Issued Dec 2023</p>
+                    <div class="certification-actions">
+                        <a href="#" class="cert-link" data-tippy-content="View Certificate"><i class="fas fa-certificate"></i></a>
+                        <a href="#" class="cert-link" data-tippy-content="Verify Credentials"><i class="fas fa-check-circle"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certification-card" data-aos="flip-up" data-aos-delay="200">
+                <div class="certification-logo">
+                    <img src="images/certifications/cert-web.jpg" alt="Web Development Certification">
+                </div>
+                <div class="certification-info">
+                    <h3>Full-Stack Web Development</h3>
+                    <p class="certification-provider">freeCodeCamp</p>
+                    <p class="certification-date">Issued Nov 2023</p>
+                    <div class="certification-actions">
+                        <a href="#" class="cert-link" data-tippy-content="View Certificate"><i class="fas fa-certificate"></i></a>
+                        <a href="#" class="cert-link" data-tippy-content="Verify Credentials"><i class="fas fa-check-circle"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certification-card" data-aos="flip-up" data-aos-delay="300">
+                <div class="certification-logo">
+                    <img src="images/certifications/cert-ai.jpg" alt="AI Certification">
+                </div>
+                <div class="certification-info">
+                    <h3>AI Fundamentals</h3>
+                    <p class="certification-provider">Microsoft Learn</p>
+                    <p class="certification-date">Issued Oct 2023</p>
+                    <div class="certification-actions">
+                        <a href="#" class="cert-link" data-tippy-content="View Certificate"><i class="fas fa-certificate"></i></a>
+                        <a href="#" class="cert-link" data-tippy-content="Verify Credentials"><i class="fas fa-check-circle"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Projects Section -->
 <section id="projects" class="section" data-aos="fade-up">
     <div class="glass-card">
@@ -301,8 +511,8 @@
             <!-- Project 1 -->
             <div class="project-card" data-aos="zoom-in" data-aos-delay="100" data-category="web">
                 <div class="project-img">
-                    <a href="images/std.jpg" class="glightbox" data-gallery="projects" data-title="Student Management System" data-description="A sophisticated academic management platform that streamlines student enrollment, course registration, attendance tracking, and grade management.">
-                        <img src="images/std.jpg" alt="Student Management System">
+                    <a href="images/projects/std.jpg" class="glightbox" data-gallery="projects" data-title="Student Management System" data-description="A sophisticated academic management platform that streamlines student enrollment, course registration, attendance tracking, and grade management.">
+                        <img src="images/projects/std.jpg" alt="Student Management System">
                     </a>
                 </div>
                 <div class="project-info">
@@ -324,8 +534,8 @@
             <!-- Project 2 -->
             <div class="project-card" data-aos="zoom-in" data-aos-delay="200" data-category="web">
                 <div class="project-img">
-                    <a href="images/voting.jpg" class="glightbox" data-gallery="projects" data-title="Electronic Voting System" data-description="A robust e-voting platform featuring biometric verification, end-to-end encryption, and tamper-proof ballot storage.">
-                        <img src="images/voting.jpg" alt="Electronic Voting System">
+                    <a href="images/projects/voting.jpg" class="glightbox" data-gallery="projects" data-title="Electronic Voting System" data-description="A robust e-voting platform featuring biometric verification, end-to-end encryption, and tamper-proof ballot storage.">
+                        <img src="images/projects/voting.jpg" alt="Electronic Voting System">
                     </a>
                 </div>
                 <div class="project-info">
@@ -347,8 +557,8 @@
             <!-- Project 3 -->
             <div class="project-card" data-aos="zoom-in" data-aos-delay="300" data-category="ai mobile">
                 <div class="project-img">
-                    <a href="images/mental.jpg" class="glightbox" data-gallery="projects" data-title="Mental Health Chatbot" data-description="An AI-powered chatbot system designed to offer psychological support to users in Mbarara Regional Referral Hospital.">
-                        <img src="images/mental.jpg" alt="Mental Health Chatbot">
+                    <a href="images/projects/mental.jpg" class="glightbox" data-gallery="projects" data-title="Mental Health Chatbot" data-description="An AI-powered chatbot system designed to offer psychological support to users in Mbarara Regional Referral Hospital.">
+                        <img src="images/projects/mental.jpg" alt="Mental Health Chatbot">
                     </a>
                 </div>
                 <div class="project-info">
@@ -365,6 +575,66 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section id="blog" class="section" data-aos="fade-up">
+    <div class="glass-card">
+        <h2>Latest Articles & Insights</h2>
+        <div class="blog-grid">
+            <div class="blog-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="blog-image">
+                    <img src="images/blog/blog1.jpg" alt="AI Ethics">
+                    <div class="blog-category">Artificial Intelligence</div>
+                </div>
+                <div class="blog-content">
+                    <h3>Ethics in AI: Building Responsible Systems</h3>
+                    <p class="blog-meta">
+                        <span><i class="far fa-calendar"></i> March 15, 2024</span>
+                        <span><i class="far fa-clock"></i> 5 min read</span>
+                    </p>
+                    <p class="blog-excerpt">Exploring the ethical considerations that developers must address when creating AI systems, and how to implement ethical frameworks...</p>
+                    <a href="#" class="btn-secondary">Read Article</a>
+                </div>
+            </div>
+            
+            <div class="blog-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="blog-image">
+                    <img src="images/blog/blog2.jpg" alt="Web Performance">
+                    <div class="blog-category">Web Development</div>
+                </div>
+                <div class="blog-content">
+                    <h3>Optimizing Web Performance for East African Markets</h3>
+                    <p class="blog-meta">
+                        <span><i class="far fa-calendar"></i> February 28, 2024</span>
+                        <span><i class="far fa-clock"></i> 7 min read</span>
+                    </p>
+                    <p class="blog-excerpt">Strategies for developing high-performance websites that work well in regions with bandwidth constraints and varied device capabilities...</p>
+                    <a href="#" class="btn-secondary">Read Article</a>
+                </div>
+            </div>
+            
+            <div class="blog-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="blog-image">
+                    <img src="images/blog/blog3.jpg" alt="Mobile Development">
+                    <div class="blog-category">Mobile Development</div>
+                </div>
+                <div class="blog-content">
+                    <h3>Creating Inclusive Mobile Apps for Diverse Users</h3>
+                    <p class="blog-meta">
+                        <span><i class="far fa-calendar"></i> January 10, 2024</span>
+                        <span><i class="far fa-clock"></i> 6 min read</span>
+                    </p>
+                    <p class="blog-excerpt">Best practices for designing and developing mobile applications that cater to users with different abilities, languages, and technical proficiency...</p>
+                    <a href="#" class="btn-secondary">Read Article</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-container">
+            <a href="#" class="btn-primary">View All Articles</a>
         </div>
     </div>
 </section>
@@ -389,7 +659,7 @@
                         </div>
                         <div class="testimonial-author">
                             <div class="testimonial-author-img">
-                                <img src="images/testimonial1.jpg" alt="Dr. James Muhumuza">
+                                <img src="images/testimonials/testimonial1.jpg" alt="Dr. James Muhumuza">
                             </div>
                             <div class="testimonial-author-info">
                                 <h4>Dr. James Muhumuza</h4>
@@ -408,7 +678,7 @@
                         </div>
                         <div class="testimonial-author">
                             <div class="testimonial-author-img">
-                                <img src="images/testimonial2.jpg" alt="Sarah Nakigozi">
+                                <img src="images/testimonials/testimonial2.jpg" alt="Sarah Nakigozi">
                             </div>
                             <div class="testimonial-author-info">
                                 <h4>Sarah Nakigozi</h4>
@@ -427,7 +697,7 @@
                         </div>
                         <div class="testimonial-author">
                             <div class="testimonial-author-img">
-                                <img src="images/testimonial3.jpg" alt="Dr. Rachel Kiconco">
+                                <img src="images/testimonials/testimonial3.jpg" alt="Dr. Rachel Kiconco">
                             </div>
                             <div class="testimonial-author-info">
                                 <h4>Dr. Rachel Kiconco</h4>
@@ -473,33 +743,89 @@
                         <span>Mbarara, Uganda</span>
                     </li>
                 </ul>
+                
+                <!-- Availability Calendar -->
+                <div class="availability-calendar">
+                    <h4>My Availability</h4>
+                    <div class="calendar-visual">
+                        <div class="calendar-legend">
+                            <span class="legend-item"><span class="legend-color available"></span> Available</span>
+                            <span class="legend-item"><span class="legend-color limited"></span> Limited</span>
+                            <span class="legend-item"><span class="legend-color booked"></span> Booked</span>
+                        </div>
+                        <div class="calendar-weeks">
+                            <div class="calendar-week">
+                                <span class="week-label">Current</span>
+                                <span class="week-availability available" data-tippy-content="Fully available this week"></span>
+                            </div>
+                            <div class="calendar-week">
+                                <span class="week-label">Next</span>
+                                <span class="week-availability limited" data-tippy-content="Limited availability (10-15 hrs)"></span>
+                            </div>
+                            <div class="calendar-week">
+                                <span class="week-label">May</span>
+                                <span class="week-availability limited" data-tippy-content="Limited availability (5-10 hrs)"></span>
+                            </div>
+                            <div class="calendar-week">
+                                <span class="week-label">June</span>
+                                <span class="week-availability available" data-tippy-content="Fully available"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-secondary btn-schedule" data-tippy-content="Schedule a meeting">Book a Consultation</a>
+                </div>
             </div
             
             <!-- Contact Form -->
             <form id="contactForm" class="contact-form" data-aos="fade-left">
                 <div class="form-group">
-                    <label for="name">Name</label>
+                    <label for="name">Full Name*</label>
                     <input type="text" id="name" name="name" required>
                     <div class="form-feedback"></div>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
+                    <label for="email">Email Address*</label>
                     <input type="email" id="email" name="email" required>
                     <div class="form-feedback"></div>
                 </div>
                 <div class="form-group">
-                    <label for="message">Message</label>
+                    <label for="company">Company/Organization</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject*</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" disabled selected>Select a subject</option>
+                        <option value="job">Job Opportunity</option>
+                        <option value="project">Project Inquiry</option>
+                        <option value="collaboration">Collaboration</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="budget">Project Budget (USD)</label>
+                    <select id="budget" name="budget">
+                        <option value="" disabled selected>Select budget range</option>
+                        <option value="small">$500 - $1,000</option>
+                        <option value="medium">$1,000 - $5,000</option>
+                        <option value="large">$5,000+</option>
+                        <option value="discuss">To be discussed</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message*</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                     <div class="form-feedback"></div>
                 </div>
+                <div class="form-group">
+                    <div class="g-recaptcha" data-sitekey="your-recaptcha-site-key"></div>
+                </div>
+                <div class="form-policy">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">I agree to the <a href="#">privacy policy</a> and consent to being contacted regarding my inquiry.</label>
+                </div>
                 <button type="submit" class="btn-primary">Send Message</button>
             </form>
-            
-            <div class="social-links" data-aos="fade-up">
-                <a href="https://github.com/michealamanya" target="_blank" data-tippy-content="Check my code on GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/micheal amanya" target="_blank" data-tippy-content="Connect with me on LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/@amanyamicheal_a" target="_blank" data-tippy-content="Follow me on Twitter"><i class="fab fa-twitter"></i></a>
-            </div>
         </div>
     </div>
 </section>
@@ -507,7 +833,35 @@
 <!-- Footer -->
 <footer data-aos="fade-up">
     <div class="glass-card footer-card">
-        <p>&copy; 2025 Micheal Amanya. All rights reserved. Crafted with passion and code.</p>
+        <div class="footer-content">
+            <div class="footer-branding">
+                <div class="footer-logo">AM</div>
+                <p>Solving complex problems with elegant solutions.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Site Map</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Social</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/michealamanya" target="_blank" data-tippy-content="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/micheal amanya" target="_blank" data-tippy-content="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/@amanyamicheal_a" target="_blank" data-tippy-content="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Micheal Amanya. All rights reserved.</p>
+            <p class="footer-credits">Crafted with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> in Uganda</p>
+        </div>
     </div>
 </footer>
 
@@ -520,6 +874,11 @@
     <i class="fas fa-arrow-up"></i>
 </div>
 
+<!-- Print Button -->
+<div id="print-portfolio" data-tippy-content="Print portfolio">
+    <i class="fas fa-print"></i>
+</div>
+
 <!-- JS Libraries -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
@@ -530,6 +889,8 @@
 <script src="https://cdn.jsdelivr.net/npm/simplebar@5.3.6/dist/simplebar.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/github-calendar@2.3.1/dist/github-calendar.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="js/script.js"></script>
 
 <!-- Initialize new UI components -->
@@ -583,7 +944,8 @@
                 'Web Developer', 
                 'AI Enthusiast', 
                 'Mobile App Developer',
-                'Problem Solver'
+                'Problem Solver',
+                'Tech Innovator'
             ],
             typeSpeed: 50,
             backSpeed: 30,
@@ -592,6 +954,47 @@
         };
         
         new Typed('#typing-text', typingOptions);
+        
+        // Professional Stats Counter Animation
+        const statNumbers = document.querySelectorAll('.stat-number');
+        
+        const animateStats = () => {
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-count'));
+                const count = +stat.innerText;
+                const speed = 200; // Lower is faster
+                const inc = target / speed;
+                
+                if (count < target) {
+                    stat.innerText = Math.ceil(count + inc);
+                    setTimeout(animateStats, 30);
+                } else {
+                    stat.innerText = target;
+                }
+            });
+        };
+        
+        // Start animation when stats are in viewport
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+        
+        document.querySelector('.professional-stats')?.forEach(stats => {
+            statsObserver.observe(stats);
+        });
+        
+        // Print button functionality
+        const printButton = document.getElementById('print-portfolio');
+        if (printButton) {
+            printButton.addEventListener('click', () => {
+                window.print();
+            });
+        }
         
         // Initialize GLightbox for project images
         const lightbox = GLightbox({
@@ -756,7 +1159,7 @@
         
         fetchGitHubData();
         
-        // Enhanced Contact Form with confetti
+        // Enhanced Contact Form with confetti and reCAPTCHA
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
@@ -765,13 +1168,27 @@
                 // Basic validation
                 const name = document.getElementById('name').value;
                 const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
                 const message = document.getElementById('message').value;
+                const privacy = document.getElementById('privacy').checked;
                 
-                if (!name || !email || !message) {
+                if (!name || !email || !subject || !message || !privacy) {
                     Swal.fire({
                         title: 'Error!',
-                        text: 'Please fill in all required fields',
+                        text: 'Please fill in all required fields and accept the privacy policy',
                         icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                    return;
+                }
+                
+                // Check reCAPTCHA
+                const recaptchaResponse = grecaptcha.getResponse();
+                if (!recaptchaResponse.length) {
+                    Swal.fire({
+                        title: 'Verification Required',
+                        text: 'Please complete the reCAPTCHA verification',
+                        icon: 'warning',
                         confirmButtonText: 'OK'
                     });
                     return;
@@ -791,7 +1208,7 @@
                 setTimeout(() => {
                     Swal.fire({
                         title: 'Message Sent!',
-                        text: 'Thank you for contacting me. I will get back to you soon!',
+                        text: 'Thank you for contacting me. I will get back to you within 24-48 hours!',
                         icon: 'success',
                         confirmButtonText: 'Great!'
                     });
@@ -804,9 +1221,35 @@
                     });
                     
                     contactForm.reset();
+                    grecaptcha.reset();
                 }, 2000);
             });
         }
+        
+        // Availability Status update based on time
+        const updateAvailabilityStatus = () => {
+            const now = new Date();
+            const day = now.getDay(); // 0 = Sunday, 6 = Saturday
+            const hour = now.getHours();
+            
+            const availabilityBadge = document.getElementById('availability-status');
+            
+            if (!availabilityBadge) return;
+            
+            // Available during weekdays 9am-5pm
+            if (day >= 1 && day <= 5 && hour >= 9 && hour < 17) {
+                availabilityBadge.innerHTML = '<span class="pulse-dot"></span> Available now';
+                availabilityBadge.className = 'availability-badge available';
+            } 
+            // Limited availability on weekends and evenings
+            else if ((day >= 1 && day <= 5 && (hour >= 17 || hour < 9)) || (day === 0 || day === 6)) {
+                availabilityBadge.innerHTML = '<span class="pulse-dot"></span> Limited availability';
+                availabilityBadge.className = 'availability-badge limited';
+            }
+        };
+        
+        updateAvailabilityStatus();
+        setInterval(updateAvailabilityStatus, 60000); // Update every minute
         
         // Project Demo Links
         const demoButtons = document.querySelectorAll('.btn-demo');

@@ -1,0 +1,148 @@
+/* Print styles for portfolio */
+
+@page {
+    margin: 1cm;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: white !important;
+    color: black !important;
+}
+
+.navbar, .theme-toggle, #back-to-top, #print-portfolio, .hamburger,
+.hero-cta, .social-links, .testimonial-controls, .btn-secondary,
+.availability-badge, .project-filter, .footer {
+    display: none !important;
+}
+
+.glass-card {
+    background: white !important;
+    box-shadow: none !important;
+    margin: 20px 0 !important;
+    padding: 15px 0 !important;
+    page-break-inside: avoid;
+}
+
+.section {
+    padding: 20px 0 !important;
+}
+
+h1, h2, h3, h4 {
+    color: #333 !important;
+    page-break-after: avoid;
+}
+
+h2 {
+    margin-top: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.highlight {
+    color: #0088ff !important;
+}
+
+p, li {
+    color: #333 !important;
+    font-size: 12pt;
+}
+
+a {
+    color: #0088ff !important;
+    text-decoration: none;
+}
+
+/* Specific section modifications */
+
+.hero-card {
+    text-align: center;
+}
+
+.typing-cursor {
+    display: none;
+}
+
+.about-content {
+    flex-direction: column;
+}
+
+.about-text {
+    width: 100% !important;
+}
+
+.skills-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+}
+
+.skill-card {
+    padding: 10px !important;
+}
+
+.cv-section {
+    margin-bottom: 15px;
+}
+
+.projects-grid {
+    grid-template-columns: 1fr !important;
+}
+
+.project-card {
+    margin-bottom: 20px;
+    padding: 0 !important;
+}
+
+.project-info p {
+    font-size: 10pt;
+}
+
+.project-tags {
+    margin: 5px 0;
+}
+
+.tag {
+    font-size: 9pt;
+    padding: 2px 8px;
+    margin: 2px;
+}
+
+.contact-container {
+    flex-direction: column;
+}
+
+.contact-form {
+    display: none;
+}
+
+/* Print-specific header */
+body::before {
+    content: "Micheal Amanya - Professional Portfolio";
+    display: block;
+    text-align: center;
+    font-size: 18pt;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #0088ff !important;
+}
+
+/* Print-specific footer */
+body::after {
+    content: "Printed from michealamanya.github.io • Contact: amanyamicheal770@gmail.com • +256 740 470 116";
+    display: block;
+    text-align: center;
+    font-size: 9pt;
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    color: #777 !important;
+}
+
+/* Fix for images */
+img {
+    max-width: 100% !important;
+}
+
+.project-img img {
+    max-height: 200px;
+    object-fit: contain;
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Favicon Generator</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0088ff;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .color-inputs {
+            display: flex;
+            gap: 15px;
+        }
+        .color-input {
+            flex: 1;
+        }
+        button {
+            background: #0088ff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #0066cc;
+        }
+        .preview {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px dashed #ddd;
+            border-radius: 10px;
+        }
+        .favicon-preview {
+            width: 64px;
+            height: 64px;
+            border-radius: 8px;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 24px;
+            color: white;
+        }
+        .download-btn {
+            background: #28c76f;
+        }
+        .download-btn:hover {
+            background: #24b263;
+        }
+        .instructions {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .instructions h3 {
+            margin-top: 0;
+        }
+        .instructions code {
+            background: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Portfolio Favicon Generator</h1>
+        <div class="form-group">
+            <label for="initials">Your Initials (1-2 characters)</label>
+            <input type="text" id="initials" maxlength="2" placeholder="AM" value="AM">
+        </div>
+        <div class="form-group">
+            <label for="font">Font Style</label>
+            <select id="font">
+                <option value="Arial, sans-serif">Sans-serif</option>
+                <option value="'Times New Roman', serif">Serif</option>
+                <option value="'Courier New', monospace">Monospace</option>
+                <option value="'Arial Black', sans-serif">Bold Sans-serif</option>
+                <option value="'Georgia', serif">Georgia</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Background Color</label>
+            <div class="color-inputs">
+                <div class="color-input">
+                    <label for="bgColor1">Start Color</label>
+                    <input type="color" id="bgColor1" value="#0088ff">
+                </div>
+                <div class="color-input">
+                    <label for="bgColor2">End Color</label>
+                    <input type="color" id="bgColor2" value="#00aaff">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="textColor">Text Color</label>
+            <input type="color" id="textColor" value="#ffffff">
+        </div>
+        <button id="generateBtn">Generate Favicon</button>
+        
+        <div class="preview">
+            <h3>Preview</h3>
+            <div class="favicon-preview" id="faviconPreview">AM</div>
+            <p>This is how your favicon will look in browser tabs.</p>
+            <button id="downloadBtn" class="download-btn" disabled>Download Favicon</button>
+        </div>
+        
+        <div class="instructions">
+            <h3>How to Use Your Favicon</h3>
+            <ol>
+                <li>Click "Generate Favicon" to create your custom icon</li>
+                <li>If satisfied with the preview, click "Download Favicon"</li>
+                <li>Save the downloaded PNG file as <code>favicon.png</code> in your <code>images</code> folder</li>
+                <li>Convert to multiple formats using <a href="https://favicon.io/favicon-converter/" target="_blank">Favicon.io Converter</a></li>
+                <li>Place the generated files in your project's <code>images</code> directory</li>
+                <li>Update your HTML to include the favicon links (already in your code)</li>
+            </ol>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const initialsInput = document.getElementById('initials');
+            const fontSelect = document.getElementById('font');
+            const bgColor1Input = document.getElementById('bgColor1');
+            const bgColor2Input = document.getElementById('bgColor2');
+            const textColorInput = document.getElementById('textColor');
+            const generateBtn = document.getElementById('generateBtn');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const faviconPreview = document.getElementById('faviconPreview');
+            
+            let canvas, ctx;
+            
+            // Update preview when inputs change
+            const updatePreview = () => {
+                const initials = initialsInput.value || 'AM';
+                const font = fontSelect.value;
+                const bgColor1 = bgColor1Input.value;
+                const bgColor2 = bgColor2Input.value;
+                const textColor = textColorInput.value;
+                
+                const gradient = `linear-gradient(135deg, ${bgColor1}, ${bgColor2})`;
+                
+                faviconPreview.style.background = gradient;
+                faviconPreview.style.fontFamily = font;
+                faviconPreview.style.color = textColor;
+                faviconPreview.textContent = initials.toUpperCase();
+            };
+            
+            // Initial preview
+            updatePreview();
+            
+            // Add event listeners to inputs
+            initialsInput.addEventListener('input', updatePreview);
+            fontSelect.addEventListener('change', updatePreview);
+            bgColor1Input.addEventListener('input', updatePreview);
+            bgColor2Input.addEventListener('input', updatePreview);
+            textColorInput.addEventListener('input', updatePreview);
+            
+            // Generate favicon
+            generateBtn.addEventListener('click', () => {
+                canvas = document.createElement('canvas');
+                canvas.width = 64;
+                canvas.height = 64;
+                ctx = canvas.getContext('2d');
+                
+                const initials = initialsInput.value || 'AM';
+                const font = fontSelect.value;
+                const bgColor1 = bgColor1Input.value;
+                const bgColor2 = bgColor2Input.value;
+                const textColor = textColorInput.value;
+                
+                // Create gradient background
+                const gradient = ctx.createLinearGradient(0, 0, 64, 64);
+                gradient.addColorStop(0, bgColor1);
+                gradient.addColorStop(1, bgColor2);
+                
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, 64, 64);
+                
+                // Add text
+                ctx.fillStyle = textColor;
+                ctx.font = `bold 32px ${font}`;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(initials.toUpperCase(), 32, 32);
+                
+                // Enable download button
+                downloadBtn.disabled = false;
+            });
+            
+            // Download favicon
+            downloadBtn.addEventListener('click', () => {
+                if (!canvas) return;
+                
+                const link = document.createElement('a');
+                link.download = 'favicon.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            });
+        });
+    </script>
+</body>
+</html>
