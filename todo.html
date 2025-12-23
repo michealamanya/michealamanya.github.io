@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App - Micheal Amanya</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A mobile-friendly todo app built with modern web technologies by Micheal Amanya.">
+    <meta name="keywords" content="todo app, task manager, mobile app, PWA, productivity">
+    <meta name="author" content="Micheal Amanya">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Todo App">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Icons -->
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/todo.css">
+</head>
+<body>
+    <!-- App Container -->
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <a href="index.html" class="back-btn" title="Back to Portfolio">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <h1 class="app-title">
+                    <i class="fas fa-tasks"></i>
+                    My Tasks
+                </h1>
+                <button class="menu-btn" id="menuBtn" title="Menu">
+                    <i class="fas fa-ellipsis-v"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat">
+                <span class="stat-number" id="totalTasks">0</span>
+                <span class="stat-label">Total</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" id="completedTasks">0</span>
+                <span class="stat-label">Done</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" id="pendingTasks">0</span>
+                <span class="stat-label">Pending</span>
+            </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">
+                <i class="fas fa-list"></i>
+                All
+            </button>
+            <button class="filter-tab" data-filter="pending">
+                <i class="fas fa-clock"></i>
+                Pending
+            </button>
+            <button class="filter-tab" data-filter="completed">
+                <i class="fas fa-check-circle"></i>
+                Done
+            </button>
+        </div>
+
+        <!-- Todo Input -->
+        <div class="todo-input-container">
+            <form class="todo-form" id="todoForm">
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="todoInput" 
+                        placeholder="What needs to be done?" 
+                        autocomplete="off"
+                        maxlength="200"
+                    >
+                    <button type="submit" class="add-btn">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Todo List -->
+        <div class="todo-list-container">
+            <div class="todo-list" id="todoList">
+                <!-- Todos will be inserted here -->
+            </div>
+            
+            <!-- Empty State -->
+            <div class="empty-state" id="emptyState">
+                <div class="empty-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>All caught up!</h3>
+                <p>No tasks to show. Add one above to get started.</p>
+            </div>
+        </div>
+
+        <!-- Menu Dropdown -->
+        <div class="menu-dropdown" id="menuDropdown">
+            <button class="menu-item" id="clearCompleted">
+                <i class="fas fa-trash-alt"></i>
+                Clear Completed
+            </button>
+            <button class="menu-item" id="clearAll">
+                <i class="fas fa-trash"></i>
+                Clear All
+            </button>
+            <button class="menu-item" id="exportData">
+                <i class="fas fa-download"></i>
+                Export Data
+            </button>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+        <p>Loading your tasks...</p>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer">
+        <!-- Toasts will be inserted here -->
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/todo.js"></script>
+</body>
+</html>

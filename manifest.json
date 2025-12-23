@@ -1,0 +1,50 @@
+{
+  "name": "Todo App - Micheal Amanya",
+  "short_name": "Todo App",
+  "description": "A powerful and elegant todo app built with modern web technologies",
+  "start_url": "/todo.html",
+  "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#667eea",
+  "orientation": "portrait-primary",
+  "categories": ["productivity", "utilities"],
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iNzIiIHZpZXdCb3g9IjAgMCA3MiA3MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMTIiIGZpbGw9InVybCgjZ3JhZDEpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQxIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzY2N2VlYTtzdG9wLW9wYWNpdHk6MSIgLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNzY0YmEyO3N0b3Atb3BhY2l0eToxIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHg9IjE2IiB5PSIyMCIgd2lkdGg9IjMyIiBoZWlnaHQ9IjQiIHJ4PSIyIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIxNiIgeT0iMjgiIHdpZHRoPSIyNCIgaGVpZ2h0PSI0IiByeD0iMiIgZmlsbD0id2hpdGUiLz4KPHJlY3QgeD0iMTYiIHk9IjM2IiB3aWR0aD0iMjgiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjU2IiBjeT0iMjIiIHI9IjQiIGZpbGw9IiM0OGJiNzgiLz4KPHBhdGggZD0ibTUzIDIyIDIgMiA0LTQiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIvPgo8Y2lyY2xlIGN4PSI1NiIgY3k9IjMwIiByPSI0IiBmaWxsPSIjNDhiYjc4Ii8+CjxwYXRoIGQ9Im01MyAzMCAyIDIgNC00IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiLz4KPGNpcmNsZSBjeD0iNTYiIGN5PSIzOCIgcj0iNCIgZmlsbD0iI2UyZThmMCIgc3Ryb2tlPSIjY2JkNWUwIiBzdHJva2Utd2lkdGg9IjEiLz4KPC9zdmc+",
+      "sizes": "72x72",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iMzIiIGZpbGw9InVybCgjZ3JhZDEpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQxIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzY2N2VlYTtzdG9wLW9wYWNpdHk6MSIgLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNzY0YmEyO3N0b3Atb3BhY2l0eToxIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHg9IjQ4IiB5PSI2NCIgd2lkdGg9Ijg4IiBoZWlnaHQ9IjEyIiByeD0iNiIgZmlsbD0id2hpdGUiLz4KPHJlY3QgeD0iNDgiIHk9Ijg4IiB3aWR0aD0iNzIiIGhlaWdodD0iMTIiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSI0OCIgeT0iMTEyIiB3aWR0aD0iODAiIGhlaWdodD0iMTIiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIvPgo8Y2lyY2xlIGN4PSIxNTIiIGN5PSI3MCIgcj0iMTIiIGZpbGw9IiM0OGJiNzgiLz4KPHBhdGggZD0ibTE0NCA3MCA2IDYgMTItMTIiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIvPgo8Y2lyY2xlIGN4PSIxNTIiIGN5PSI5NCIgcj0iMTIiIGZpbGw9IiM0OGJiNzgiLz4KPHBhdGggZD0ibTE0NCA5NCA2IDYgMTItMTIiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIvPgo8Y2lyY2xlIGN4PSIxNTIiIGN5PSIxMTgiIHI9IjEyIiBmaWxsPSIjZTJlOGYwIiBzdHJva2U9IiNjYmQ1ZTAiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4=",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iODAiIGZpbGw9InVybCgjZ3JhZDEpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQxIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzY2N2VlYTtzdG9wLW9wYWNpdHk6MSIgLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNzY0YmEyO3N0b3Atb3BhY2l0eToxIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHg9IjEyMCIgeT0iMTYwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwIiByeD0iMTUiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHg9IjEyMCIgeT0iMjIwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjMwIiByeD0iMTUiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHg9IjEyMCIgeT0iMjgwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjMwIiByeD0iMTUiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjM2MCIgY3k9IjE3NSIgcj0iMjAiIGZpbGw9IiM0OGJiNzgiLz4KPHBhdGggZD0ibTM1MiAxNzUgOCA4IDE2LTE2IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjQiIGZpbGw9Im5vbmUiLz4KPGNpcmNsZSBjeD0iMzYwIiBjeT0iMjM1IiByPSIyMCIgZmlsbD0iIzQ4YmI3OCIvPgo8cGF0aCBkPSJtMzUyIDIzNSA4IDggMTYtMTYiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNCIgZmlsbD0ibm9uZSIvPgo8Y2lyY2xlIGN4PSIzNjAiIGN5PSIyOTUiIHI9IjIwIiBmaWxsPSIjZTJlOGYwIiBzdHJva2U9IiNjYmQ1ZTAiIHN0cm9rZS13aWR0aD0iNCIvPgo8L3N2Zz4=",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Add new task",
+      "short_name": "New Task",
+      "description": "Quickly add a new task",
+      "url": "/todo.html?action=new",
+      "icons": [
+        {
+          "src": "images/icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/screenshot-mobile.png",
+      "sizes": "414x896",
+      "type": "image/png"
+    }
+  ]
+}
