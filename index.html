@@ -3,2070 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Micheal Amanya - Software Developer & Computer Science Student</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Micheal Amanya is a Computer Science student and developer specializing in AI, web development, and mobile applications.">
-    <meta name="keywords" content="software developer, computer science, AI, web development, Uganda, Mbarara University">
+    <title>Micheal Amanya | Software Developer</title>
+    <meta name="description" content="Micheal Amanya is a software developer focused on AI, web platforms, and mobile applications.">
+    <meta name="keywords" content="Micheal Amanya, software developer, AI, web development, Uganda">
     <meta name="author" content="Micheal Amanya">
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Micheal Amanya - Software Developer Portfolio">
-    <meta property="og:description" content="Computer Science student specializing in AI, web and mobile applications.">
-    <meta property="og:image" content="https://michealamanya.github.io/images/profile.jpg">
-    <meta property="og:url" content="https://michealamanya.github.io">
+    <meta property="og:title" content="Micheal Amanya | Software Developer">
+    <meta property="og:description" content="Portfolio for Micheal Amanya: AI, web, and mobile engineering projects.">
+    <meta property="og:image" content="https://michealamanya.github.io/images/new.jpg">
+    <meta property="og:url" content="https://michealamanya.github.io/">
     <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- Favicon -->
+
     <link rel="icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    
-    <!-- Existing CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- New UI Libraries -->
-    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@floating-ui/core/dist/floating-ui.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6/dist/tippy.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@5.3.6/dist/simplebar.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    <link rel="stylesheet" href="css/ui-enhancements.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/print.css" media="print">
-    
-    <!-- Enhanced Developer Theme Styling -->
-    <style>
-        :root {
-            --bg-primary: #f8fafc;
-            --bg-secondary: #f1f5f9;
-            --text-primary: #0f172a;
-            --text-secondary: #475569;
-            --accent-primary: #3b82f6;
-            --accent-secondary: #8b5cf6;
-            --accent-tertiary: #06b6d4;
-            --card-bg: rgba(255, 255, 255, 0.8);
-            --border-color: rgba(148, 163, 184, 0.2);
-            --glow-color: rgba(59, 130, 246, 0.15);
-            --code-bg: #1e293b;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body.light-theme {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%) !important;
-            background-attachment: fixed;
-            color: var(--text-primary);
-            min-height: 100vh;
-            position: relative;
-            overflow-x: hidden;
-        }
-        
-        /* Animated Background Pattern */
-        body.light-theme::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(6, 182, 212, 0.05) 0%, transparent 40%),
-                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            pointer-events: none;
-            z-index: 0;
-        }
-        
-        /* Floating Geometric Shapes */
-        .background {
-            display: block !important;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            overflow: hidden;
-        }
-        
-        .background::before,
-        .background::after {
-            content: '';
-            position: absolute;
-            border-radius: 50%;
-            animation: float 20s ease-in-out infinite;
-        }
-        
-        .background::before {
-            width: 400px;
-            height: 400px;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
-            top: -100px;
-            right: -100px;
-            animation-delay: 0s;
-        }
-        
-        .background::after {
-            width: 300px;
-            height: 300px;
-            background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(59, 130, 246, 0.1));
-            bottom: -50px;
-            left: -50px;
-            animation-delay: -10s;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            25% { transform: translate(20px, -20px) rotate(5deg); }
-            50% { transform: translate(0, -40px) rotate(0deg); }
-            75% { transform: translate(-20px, -20px) rotate(-5deg); }
-        }
-        
-        /* Enhanced Glass Card */
-        .glass-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%) !important;
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.5) !important;
-            border-radius: 24px !important;
-            box-shadow: 
-                0 8px 32px rgba(0, 0, 0, 0.08),
-                0 2px 8px rgba(0, 0, 0, 0.04),
-                inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .glass-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
-        }
-        
-        /* Code-themed Decorative Elements */
-        .glass-card::after {
-            content: '</>';
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-family: 'Fira Code', 'Monaco', monospace;
-            font-size: 14px;
-            color: rgba(59, 130, 246, 0.2);
-            font-weight: 600;
-            letter-spacing: 2px;
-        }
-        
-        /* Enhanced Navbar */
-        .navbar {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%) !important;
-            backdrop-filter: blur(20px) saturate(180%);
-            border-bottom: 1px solid rgba(148, 163, 184, 0.15) !important;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05) !important;
-            z-index: 1000;
-        }
-        
-        .logo {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) !important;
-            padding: 4px;
-            border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .logo img {
-            border: 2px solid white;
-        }
-        
-        .logo:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
-        }
-        
-        .nav-links a {
-            position: relative;
-            color: var(--text-secondary) !important;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-            border-radius: 2px;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-links a:hover {
-            color: var(--accent-primary) !important;
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
-        /* Section Styling */
-        .section {
-            background: transparent;
-            position: relative;
-            z-index: 1;
-        }
-        
-        /* Typography */
-        h1, h2, h3, h4, h5, h6 {
-            color: var(--text-primary);
-            font-weight: 700;
-        }
-        
-        h2 {
-            font-size: 2.5rem;
-            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 2rem;
-            position: relative;
-            display: inline-block;
-        }
-        
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-            border-radius: 4px;
-        }
-        
-        p, li {
-            color: var(--text-secondary);
-            line-height: 1.8;
-        }
-        
-        .highlight {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 700;
-        }
-        
-        /* Enhanced Buttons */
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%) !important;
-            color: white !important;
-            border: none !important;
-            padding: 14px 32px;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s ease;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
-        }
-        
-        .btn-primary:hover::before {
-            left: 100%;
-        }
-        
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.9) !important;
-            color: var(--text-primary) !important;
-            border: 2px solid rgba(59, 130, 246, 0.2) !important;
-            padding: 12px 28px;
-            border-radius: 12px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-secondary:hover {
-            border-color: var(--accent-primary) !important;
-            background: rgba(59, 130, 246, 0.05) !important;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.15);
-        }
-        
-        /* Enhanced Cards */
-        .skill-card, .service-card, .certification-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%) !important;
-            border: 1px solid rgba(148, 163, 184, 0.15) !important;
-            border-radius: 20px !important;
-            padding: 24px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .skill-card::before, .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .skill-card:hover, .service-card:hover, .certification-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.1),
-                0 0 0 1px rgba(59, 130, 246, 0.1);
-        }
-        
-        .skill-card:hover::before, .service-card:hover::before {
-            opacity: 1;
-        }
-        
-        .skill-card i, .service-card i {
-            font-size: 2.5rem;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 16px;
-        }
-        
-        /* Project Cards */
-        .project-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%) !important;
-            border: 1px solid rgba(148, 163, 184, 0.15) !important;
-            border-radius: 20px !important;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 
-                0 25px 50px rgba(0, 0, 0, 0.12),
-                0 0 0 1px rgba(59, 130, 246, 0.1);
-        }
-        
-        .project-img {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .project-img::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .project-card:hover .project-img::after {
-            opacity: 1;
-        }
-        
-        .project-img img {
-            transition: transform 0.5s ease;
-        }
-        
-        .project-card:hover .project-img img {
-            transform: scale(1.1);
-        }
-        
-        /* Tags */
-        .tag {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1)) !important;
-            color: var(--accent-primary) !important;
-            border: 1px solid rgba(59, 130, 246, 0.2) !important;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .tag:hover {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) !important;
-            color: white !important;
-            border-color: transparent !important;
-            transform: scale(1.05);
-        }
-        
-        /* Blog Cards */
-        .blog-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%) !important;
-            border: 1px solid rgba(148, 163, 184, 0.15) !important;
-            border-radius: 20px !important;
-            overflow: hidden;
-            transition: all 0.4s ease;
-        }
-        
-        .blog-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .blog-category {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) !important;
-            color: white;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-        
-        /* Filter Buttons */
-        .filter-btn {
-            background: rgba(255, 255, 255, 0.9) !important;
-            color: var(--text-secondary) !important;
-            border: 2px solid rgba(148, 163, 184, 0.2) !important;
-            padding: 10px 24px;
-            border-radius: 30px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .filter-btn:hover, .filter-btn.active {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) !important;
-            color: white !important;
-            border-color: transparent !important;
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-        }
-        
-        /* Skill Progress Bar */
-        .skill-progress-container {
-            background: rgba(148, 163, 184, 0.2);
-            border-radius: 10px;
-            height: 8px;
-            overflow: hidden;
-            margin-top: 12px;
-        }
-        
-        .skill-progress {
-            height: 100%;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
-            border-radius: 10px;
-            transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-        }
-        
-        .skill-progress::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            animation: shimmer 2s infinite;
-        }
-        
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-        
-        .skill-level {
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 4px 10px;
-            border-radius: 12px;
-            margin-top: 8px;
-            display: inline-block;
-        }
-        
-        .skill-level.advanced {
-            background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.1));
-            color: #16a34a;
-        }
-        
-        .skill-level.intermediate {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.1));
-            color: var(--accent-primary);
-        }
-        
-        /* Timeline */
-        .timeline-line {
-            background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary)) !important;
-            width: 4px;
-            border-radius: 4px;
-        }
-        
-        .timeline-dot {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) !important;
-            box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.2);
-        }
-        
-        .timeline-content {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%) !important;
-            border: 1px solid rgba(148, 163, 184, 0.15) !important;
-            border-radius: 16px;
-            padding: 24px;
-        }
-        
-        /* Testimonial Section */
-        .testimonial-content {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
-            border-radius: 20px;
-            padding: 32px;
-            border: 1px solid rgba(148, 163, 184, 0.15);
-        }
-        
-        .testimonial-text i {
-            font-size: 2rem;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .testimonial-control {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) !important;
-            color: white !important;
-            border: none;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-        }
-        
-        .testimonial-control:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
-        }
-        
-        .testimonial-dot {
-            background: rgba(148, 163, 184, 0.3);
-            transition: all 0.3s ease;
-        }
-        
-        .testimonial-dot.active {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            transform: scale(1.3);
-        }
-        
-        /* Form Styling */
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            background: rgba(255, 255, 255, 0.9) !important;
-            border: 2px solid rgba(148, 163, 184, 0.2) !important;
-            border-radius: 12px;
-            padding: 14px 18px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            color: var(--text-primary);
-        }
-        
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            border-color: var(--accent-primary) !important;
-            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
-            outline: none;
-        }
-        
-        .form-group label {
-            color: var(--text-primary);
-            font-weight: 600;
-            margin-bottom: 8px;
-            display: block;
-        }
-        
-        /* Availability Badge */
-        .availability-badge {
-            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
-            border: 1px solid rgba(34, 197, 94, 0.3);
-            color: #16a34a;
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-        
-        .pulse-dot {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background: #22c55e;
-            border-radius: 50%;
-            margin-right: 8px;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.2); }
-        }
-        
-        /* Professional Stats */
-        .professional-stats {
-            display: flex;
-            gap: 40px;
-            margin-top: 32px;
-            padding-top: 32px;
-            border-top: 1px solid rgba(148, 163, 184, 0.15);
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            display: block;
-        }
-        
-        .stat-label {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-        
-        /* Preloader */
-        #preloader {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-        }
-        
-        .loader {
-            width: 60px;
-            height: 60px;
-            border: 4px solid rgba(59, 130, 246, 0.2);
-            border-top-color: var(--accent-primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        
-        .loading-text {
-            margin-top: 20px;
-            color: var(--text-secondary);
-            font-weight: 500;
-        }
-        
-        /* Footer */
-        .footer-card {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%) !important;
-            color: white !important;
-        }
-        
-        .footer-card h4, .footer-card p, .footer-card a, .footer-card li {
-            color: rgba(255, 255, 255, 0.9) !important;
-        }
-        
-        .footer-logo {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) !important;
-            padding: 4px;
-            border-radius: 50%;
-            display: inline-block;
-        }
-        
-        .footer-logo img {
-            border: 2px solid white;
-        }
-        
-        .social-links a {
-            background: rgba(255, 255, 255, 0.1);
-            color: white !important;
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            transform: translateY(-3px);
-        }
-        
-        /* Back to Top & Print Buttons */
-        #back-to-top, #print-portfolio {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) !important;
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-            position: fixed;
-            z-index: 999;
-        }
-        
-        #back-to-top {
-            bottom: 30px;
-            right: 30px;
-        }
-        
-        #print-portfolio {
-            bottom: 90px;
-            right: 30px;
-        }
-        
-        #back-to-top:hover, #print-portfolio:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
-        }
-        
-        /* GitHub Section */
-        .github-stat {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
-            border: 1px solid rgba(148, 163, 184, 0.15);
-            border-radius: 16px;
-            padding: 20px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .github-stat:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        }
-        
-        .github-stat i {
-            font-size: 1.5rem;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .github-stat span {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--text-primary) !important;
-            display: block;
-            margin: 8px 0;
-        }
-        
-        /* Calendar Visual */
-        .calendar-visual {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 16px;
-            padding: 20px;
-            border: 1px solid rgba(148, 163, 184, 0.15);
-        }
-        
-        .week-availability {
-            width: 24px;
-            height: 24px;
-            border-radius: 6px;
-            display: inline-block;
-        }
-        
-        .week-availability.available {
-            background: linear-gradient(135deg, #22c55e, #16a34a);
-        }
-        
-        .week-availability.limited {
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-        }
-        
-        .week-availability.booked {
-            background: linear-gradient(135deg, #ef4444, #dc2626);
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            h2 {
-                font-size: 1.8rem;
-            }
-            
-            .professional-stats {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .glass-card::after {
-                display: none;
-            }
-        }
-    </style>
 </head>
-<body class="light-theme">
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader">
-            <div class="loader-inner"></div>
-        </div>
-        <p class="loading-text">Loading Micheal's Portfolio...</p>
-    </div>
+<body>
+    <div class="page-aura" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
-    <div class="background"></div>
-    
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <div class="logo" data-tippy-content="Micheal Amanya">
-                <img src="images/new.jpg" alt="Micheal Amanya" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home" data-tippy-content="Home Section">Home</a></li>
-                <li><a href="#about" data-tippy-content="Learn About Me">About</a></li>
-                <li><a href="#services" data-tippy-content="My Services">Services</a></li>
-                <li><a href="#skills" data-tippy-content="My Technical Skills">Skills</a></li>
-                <li><a href="#cv" data-tippy-content="My Resume">CV</a></li>
-                <li><a href="#projects" data-tippy-content="My Portfolio Work">Projects</a></li>
-                <li><a href="#certifications" data-tippy-content="My Certifications">Certifications</a></li>
-                <li><a href="#blog" data-tippy-content="My Blog">Blog</a></li>
-                <li><a href="#testimonials" data-tippy-content="What Others Say">Testimonials</a></li>
-                <li><a href="#contact" data-tippy-content="Get in Touch">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Home Section -->
-    <section id="home" class="section" data-aos="fade-up">
-        <div class="glass-card hero-card">
-            <div class="profile-image">
+    <header class="site-header" id="home">
+        <nav class="nav-wrap">
+            <a class="brand" href="#home" aria-label="Go to top">
                 <img src="images/new.jpg" alt="Micheal Amanya">
-            </div>
-            <div class="availability-badge" id="availability-status">
-                <span class="pulse-dot"></span> Available for new projects
-            </div>
-            <h1>Hi, I'm <span class="highlight">Micheal Amanya</span></h1>
-            <p class="hero-text" data-aos="fade-up" data-aos-delay="200">I am a <span id="typing-text"></span><span class="typing-cursor">|</span></p>
-            <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
-                <a href="#about" class="btn-primary">Get to know me</a>
-                <a href="#contact" class="btn-secondary">Hire me</a>
-            </div>
-            <div class="professional-stats">
-                <div class="stat-item">
-                    <span class="stat-number" data-count="3">0</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-count="15">0</span>
-                    <span class="stat-label">Projects Completed</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-count="8">0</span>
-                    <span class="stat-label">Happy Clients</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section (enhanced) -->
-    <section id="about" class="section" data-aos="fade-up">
-        <div class="glass-card">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I am a Computer Science student at Mbarara University of Science and Technology, class of 2023 (Reg. No: 2023/BCS/030/PS). My passion lies in developing impactful systems with a particular focus on Artificial Intelligence, mobile applications, Linux systems, and data visualization. I strive to solve real-world problems by merging traditional computing with futuristic technologies. I'm also deeply engaged in research, especially on mobile-based assistive technologies for the visually impaired and mental health solutions.</p>
-                    <p>My background in both web and software development is complemented by practical experience with biometric systems, AI-powered tools, and shell scripting. I'm constantly learning, building, and pushing the boundaries of innovation. When I'm not coding, you'll find me exploring Ubuntu terminals or sketching system architecture for my next big idea.</p>
-                    
-                    <!-- Languages Section -->
-                    <div class="languages-section">
-                        <h3>Languages I Speak</h3>
-                        <div class="languages-list">
-                            <div class="language-item">
-                                <img src="https://flagcdn.com/w40/gb.png" alt="English Flag" class="language-flag">
-                                <span>English (Fluent)</span>
-                            </div>
-                            <div class="language-item">
-                                <img src="https://flagcdn.com/w40/ug.png" alt="Uganda Flag" class="language-flag">
-                                <span>Runyankole (Native)</span>
-                            </div>
-                            <div class="language-item">
-                                <img src="https://flagcdn.com/w40/ug.png" alt="Uganda Flag" class="language-flag">
-                                <span>Luganda (Conversational)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- GitHub Contributions -->
-            <div class="github-section">
-                <h3>My GitHub Contributions</h3>
-                <div id="github-contributions" class="github-contributions-container">
-                    <div class="github-calendar">
-                    <!-- GitHub calendar will be loaded here -->
-                    </div>
-                    <div class="github-stats">
-                        <div class="github-stat">
-                            <i class="fas fa-code-branch"></i>
-                            <span id="gh-repos">--</span>
-                            <p>Repositories</p>
-                        </div>
-                        <div class="github-stat">
-                            <i class="fas fa-star"></i>
-                            <span id="gh-stars">--</span>
-                            <p>Stars</p>
-                        </div>
-                        <div class="github-stat">
-                            <i class="fas fa-code"></i>
-                            <span id="gh-commits">--</span>
-                            <p>Commits</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="section" data-aos="fade-up">
-        <div class="glass-card">
-            <h2>My Services & Expertise</h2>
-            <div class="services-container">
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>Creating responsive, accessible, and performant web applications using modern frameworks and best practices.</p>
-                    <ul class="service-list">
-                        <li>Custom Website Development</li>
-                        <li>Frontend & Backend Solutions</li>
-                        <li>API Development & Integration</li>
-                        <li>Website Maintenance & Support</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Mobile App Development</h3>
-                    <p>Building cross-platform mobile applications with intuitive interfaces and powerful functionality.</p>
-                    <ul class="service-list">
-                        <li>Native & Cross-platform Apps</li>
-                        <li>App UI/UX Design</li>
-                        <li>App Performance Optimization</li>
-                        <li>App Testing & Deployment</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AI & Machine Learning</h3>
-                    <p>Developing intelligent systems that learn from data and improve over time to solve complex problems.</p>
-                    <ul class="service-list">
-                        <li>Data Analysis & Visualization</li>
-                        <li>Predictive Models</li>
-                        <li>Natural Language Processing</li>
-                        <li>Computer Vision Solutions</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>Database Design</h3>
-                    <p>Creating efficient, scalable, and secure database architectures to manage your critical data.</p>
-                    <ul class="service-list">
-                        <li>Database Modeling & Architecture</li>
-                        <li>SQL & NoSQL Solutions</li>
-                        <li>Data Migration & Integration</li>
-                        <li>Performance Optimization</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="cta-container">
-                <a href="#contact" class="btn-primary">Request Custom Service</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-   <section id="skills" class="section" data-aos="fade-up">
-    <div class="glass-card">
-        <h2>My Skills</h2>
-        <div class="skills-grid">
-            <!-- Programming Languages -->
-            <div class="skill-card" data-aos="flip-left" data-aos-delay="100" data-tippy-content="3+ years experience with Python development">
-                <i class="fab fa-python"></i>
-                <p>Python</p>
-                <div class="skill-level advanced">Advanced</div>
-                <div class="skill-progress-container">
-                    <div class="skill-progress" data-percent="90"></div>
-                </div>
-            </div>
-            <div class="skill-card" data-aos="flip-left" data-aos-delay="200" data-tippy-content="2 years working with Java applications">
-                <i class="fab fa-java"></i>
-                <p>Java</p>
-                <div class="skill-level intermediate">Intermediate</div>
-                <div class="skill-progress-container">
-                    <div class="skill-progress" data-percent="70"></div>
-                </div>
-            </div>
-            <div class="skill-card" data-aos="flip-left" data-aos-delay="300" data-tippy-content="Expert in semantic HTML5">
-                <i class="fab fa-html5"></i>
-                <p>HTML</p>
-                <div class="skill-level advanced">Advanced</div>
-                <div class="skill-progress-container">
-                    <div class="skill-progress" data-percent="95"></div>
-                </div>
-            </div>
-            <div class="skill-card" data-aos="flip-left" data-aos-delay="400" data-tippy-content="Experienced with responsive layouts">
-                <i class="fab fa-css3-alt"></i>
-                <p>CSS</p>
-                <div class="skill-level intermediate">Intermediate</div>
-                <div class="skill-progress-container">
-                    <div class="skill-progress" data-percent="75"></div>
-                </div>
-            </div>
-            <div class="skill-card" data-aos="flip-left" data-aos-delay="500" data-tippy-content="Proficient in modern JavaScript">
-            </div>
-            <div class="skill-card" data-aos="flip-left" data-aos-delay="600" data-tippy-content="Backend development with PHP">
-                <i class="fab fa-php"></i>
-                <p>PHP</p>
-                <div class="skill-progress-container">
-                    <div class="skill-progress" data-percent="60"></div>
-                </div>
-            </div>
-            
-            <!-- Frameworks & Libraries -->
-            <div class="skill-card" data-aos="flip-left" data-aos-delay="700" data-tippy-content="Building web applications with Django">
-                <i class="fab fa-django"></i>
-                <p>Django</p>
-                <div class="skill-progress-container">
-                    <div class="skill-progress" data-percent="80"></div>
-                </div>
-            </div>
-           
-            
-            <!-- Databases -->
-            <div class="skill-card" data-aos="flip-left" data-aos-delay="800" data-tippy-content="Database design and management">
-                <i class="fas fa-database"></i>
-                <p>MySQL</p>
-                <div class="skill-progress-container">
-                    <div class="skill-progress" data-percent="75"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Professional Timeline Section -->
-<section id="timeline" class="section" data-aos="fade-up">
-    <div class="glass-card">
-        <h2>Professional Journey</h2>
-        <div class="timeline-container">
-            <div class="timeline-line"></div>
-            
-            <!-- Timeline Item 1 -->
-            <div class="timeline-item" data-aos="fade-right">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2023 - Present</div>
-                <div class="timeline-content">
-                    <h3>Computer Science Student</h3>
-                    <h4>Mbarara University of Science and Technology</h4>
-                    <p>Pursuing a Bachelor's degree in Computer Science with focus on AI, algorithms, and software engineering.</p>
-                </div>
-            </div>
-            
-            <!-- Timeline Item 2 -->
-            <div class="timeline-item" data-aos="fade-left">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2022 - 2023</div>
-                <div class="timeline-content">
-                    <h3>Freelance Developer</h3>
-                    <h4>Self-employed</h4>
-                    <p>Developed websites and applications for local businesses while improving my technical skills.</p>
-                </div>
-            </div>
-            
-            <!-- Timeline Item 3 -->
-            <div class="timeline-item" data-aos="fade-right">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2022</div>
-                <div class="timeline-content">
-                    <h3>High School Graduate</h3>
-                    <h4>St. Thomas Vocational Secondary School</h4>
-                    <p>Completed UACE with focus on science subjects, laying the foundation for my technical education.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CV Section -->
-<section id="cv" class="section" data-aos="fade-up">
-    <div class="glass-card">
-        <h2>Curriculum Vitae</h2>
-
-        <!-- Personal Details -->
-        <div class="cv-section">
-            <h3>Personal Information</h3>
-            <ul class="cv-list">
-                <li><strong>Name:</strong> Micheal Amanya</li>
-                <li><strong>Nationality:</strong> Ugandan</li>
-                <li><strong>Address:</strong> Mbarara, Uganda</li>
-                <li><strong>Email:</strong> <a href="mailto:amanyamicheal770@gmail.com">amanya micheal</a></li>
-                <li><strong>Phone:</strong> +256 740 470 116</li>
-            </ul>
-        </div>
-
-        <!-- Education -->
-        <div class="cv-section">
-            <h3>Education</h3>
-            <ul class="cv-list">
-                <li>
-                    <strong>Bachelor of Computer Science</strong><br>
-                    Mbarara University of Science and Technology<br>
-                    2023 – Present
-                </li>
-                <li>
-                    <strong>High School</strong><br>
-                    St. Thomas vocational secondary school, Uganda<br>
-                    UACE – 2020-2022
-                </li>
-                <li>
-                    <strong>Secondary School</strong><br>
-                    St. Thomas vocational secondary school, Uganda<br>
-                    PLE – 2016-2019
-                <li>
-                    <strong>Primary School</strong><br>
-                    St. Thomas primary school, Uganda<br>
-                    PLE – 2009-2015
-            </ul>
-        </div>
-
-        <!-- Technical Skills -->
-        <div class="cv-section">
-            <h3>Technical Skills</h3>
-            <ul class="cv-list two-columns">
-                <li>Python, Java, PHP</li>
-                <li>HTML, CSS, JavaScript</li>
-                <li> Django</li>
-                <li>MySQL</li>
-            </ul>
-        </div>
-
-        <!-- Projects -->
-        <div class="cv-section">
-            <h3>Projects</h3>
-            <ul class="cv-list">
-                <li><strong>Hospital Management System</strong> – AI-powered disease detection</li>
-                <li><strong>Student Management System</strong> – Secure login, dashboards, CRUD</li>
-                </ul>
-        </div>
-
-        <!-- Internships -->
-        <div class="cv-section">
-            <h3>Internships</h3>
-            <ul class="cv-list">
-                <li><strong>Computer Science Intern</strong><br>
-                theictlabs Uganda – June 2025 </li>
-            </ul>
-        </div>
-
-        <!-- Hobbies / Interests -->
-        <div class="cv-section">
-            <h3>Interests</h3>
-            <ul class="cv-list">
-                <li>Mobile App Development</li>
-                <li>AI Research & Automation</li>
-                <li>Linux Customization</li>
-                <li>Tech Evangelism</li>
-            </ul>
-        </div>
-        
-        <!-- Download Button -->
-        <div class="cv-download">
-            <a href="assets/micheal_amanya_cv.pdf" download class="btn-primary">
-                <i class="fas fa-download"></i> Download Full CV
+                <span>Micheal Amanya</span>
             </a>
-        </div>
-    </div>
-</section>
 
-<!-- Certifications Section -->
-<section id="certifications" class="section" data-aos="fade-up">
-    <div class="glass-card">
-        <h2>Certifications & Training</h2>
-        <div class="certifications-container">
-            <div class="certification-card" data-aos="flip-up" data-aos-delay="100">
-                <div class="certification-logo">
-                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=100&h=100&fit=crop" alt="Python Certification">
-                </div>
-                <div class="certification-info">
-                    <h3>Python for Data Science</h3>
-                    <p class="certification-provider">Coursera - IBM</p>
-                    <p class="certification-date">Issued Dec 2023</p>
-                    <div class="certification-actions">
-                        <a href="#" class="cert-link" data-tippy-content="View Certificate"><i class="fas fa-certificate"></i></a>
-                        <a href="#" class="cert-link" data-tippy-content="Verify Credentials"><i class="fas fa-check-circle"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="certification-card" data-aos="flip-up" data-aos-delay="200">
-                <div class="certification-logo">
-                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=100&h=100&fit=crop" alt="Web Development Certification">
-                </div>
-                <div class="certification-info">
-                    <h3>Full-Stack Web Development</h3>
-                    <p class="certification-provider">freeCodeCamp</p>
-                    <p class="certification-date">Issued Nov 2023</p>
-                    <div class="certification-actions">
-                        <a href="#" class="cert-link" data-tippy-content="View Certificate"><i class="fas fa-certificate"></i></a>
-                        <a href="#" class="cert-link" data-tippy-content="Verify Credentials"><i class="fas fa-check-circle"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="certification-card" data-aos="flip-up" data-aos-delay="300">
-                <div class="certification-logo">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=100&h=100&fit=crop" alt="AI Certification">
-                </div>
-                <div class="certification-info">
-                    <h3>AI Fundamentals</h3>
-                    <p class="certification-provider">Microsoft Learn</p>
-                    <p class="certification-date">Issued Oct 2023</p>
-                    <div class="certification-actions">
-                        <a href="#" class="cert-link" data-tippy-content="View Certificate"><i class="fas fa-certificate"></i></a>
-                        <a href="#" class="cert-link" data-tippy-content="Verify Credentials"><i class="fas fa-check-circle"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+            </button>
 
-<!-- Projects Section -->
-<section id="projects" class="section" data-aos="fade-up">
-    <div class="glass-card">
-        <h2>My Projects</h2>
-        
-        <!-- Project Filters -->
-        <div class="project-filter">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="web">Web</button>
-            <button class="filter-btn" data-filter="mobile">Mobile</button>
-            <button class="filter-btn" data-filter="ai">AI</button>
-        </div>
-        
-        <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card" data-aos="zoom-in" data-aos-delay="100" data-category="web">
-                <div class="project-img">
-                    <a href="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop" class="glightbox" data-gallery="projects" data-title="Student Management System" data-description="A sophisticated academic management platform that streamlines student enrollment, course registration, attendance tracking, and grade management.">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=300&fit=crop" alt="Student Management System">
-                    </a>
-                </div>
-                <div class="project-info">
-                    <h3>Student Management System</h3>
-                    <p>A sophisticated academic management platform that streamlines student enrollment, course registration, attendance tracking, and grade management. Implemented with Django REST framework, PostgreSQL, and JWT authentication. Features include customizable dashboards, performance analytics, and real-time notifications for academic milestones.</p>
-                    <div class="project-tags">
-                        <span class="tag" data-tippy-content="Primary backend language">Python</span>
-                        <span class="tag" data-tippy-content="Web framework">Django</span>
-                        <span class="tag" data-tippy-content="Database">PostgreSQL</span>
-                        <span class="tag" data-tippy-content="API architecture">REST API</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/michealamanya/student-management-system-in-django" class="btn-secondary" data-tippy-content="View source code"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="#" class="btn-secondary btn-demo" data-project="student-system" data-tippy-content="See it in action"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Project 2 -->
-            <div class="project-card" data-aos="zoom-in" data-aos-delay="200" data-category="web">
-                <div class="project-img">
-                    <a href="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=800&h=600&fit=crop" class="glightbox" data-gallery="projects" data-title="Electronic Voting System" data-description="A robust e-voting platform featuring biometric verification, end-to-end encryption, and tamper-proof ballot storage.">
-                        <img src="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=400&h=300&fit=crop" alt="Electronic Voting System">
-                    </a>
-                </div>
-                <div class="project-info">
-                    <h3>Electronic Voting System</h3>
-                    <p>A robust e-voting platform featuring biometric verification, end-to-end encryption, and tamper-proof ballot storage. Implements blockchain technology for vote integrity and comprehensive audit trails. Successfully deployed for student government elections with 99.8% system reliability and dramatically increased voter participation.</p>
-                    <div class="project-tags">
-                        <span class="tag" data-tippy-content="Backend language">PHP</span>
-                        <span class="tag" data-tippy-content="Database">MySQL</span>
-                        <span class="tag" data-tippy-content="Frontend interactivity">JavaScript</span>
-                        <span class="tag" data-tippy-content="Data protection">Security</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/michealamanya/evoting" class="btn-secondary" data-tippy-content="View source code"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="#" class="btn-secondary btn-demo" data-project="evoting" data-tippy-content="See it in action"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Project 3 -->
-            <div class="project-card" data-aos="zoom-in" data-aos-delay="300" data-category="ai mobile">
-                <div class="project-img">
-                    <a href="https://images.unsplash.com/photo-1559526324-593bc073d938?w=800&h=600&fit=crop" class="glightbox" data-gallery="projects" data-title="Mental Health Chatbot" data-description="An AI-powered chatbot system designed to offer psychological support to users in Mbarara Regional Referral Hospital.">
-                        <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?w=400&h=300&fit=crop" alt="Mental Health Chatbot">
-                    </a>
-                </div>
-                <div class="project-info">
-                    <h3>Mental Health Chatbot</h3>
-                    <p>An AI-powered chatbot system designed to offer psychological support to users in Mbarara Regional Referral Hospital. Built with NLP tools and Flutter UI, targeting emotional well-being with anonymity and 24/7 availability.</p>
-                    <div class="project-tags">
-                        <span class="tag" data-tippy-content="Artificial Intelligence">AI</span>
-                        <span class="tag" data-tippy-content="Mobile development">Flutter</span>
-                        <span class="tag" data-tippy-content="Natural Language Processing">NLP</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/michealamanya/mindmate" class="btn-secondary" data-tippy-content="View source code"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="#" class="btn-secondary btn-demo" data-project="chatbot" data-tippy-content="See it in action"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-<!-- Blog Section -->
-<section id="blog" class="section" data-aos="fade-up">
-    <div class="glass-card">
-        <h2>Latest Articles & Insights</h2>
-        <div class="blog-grid">
-            <div class="blog-card" data-aos="zoom-in" data-aos-delay="100">
-                <div class="blog-image">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop" alt="AI Ethics">
-                    <div class="blog-category">Artificial Intelligence</div>
-                </div>
-                <div class="blog-content">
-                    <h3>Ethics in AI: Building Responsible Systems</h3>
-                    <p class="blog-meta">
-                        <span><i class="far fa-calendar"></i> March 15, 2024</span>
-                        <span><i class="far fa-clock"></i> 5 min read</span>
-                    </p>
-                    <p class="blog-excerpt">Exploring the ethical considerations that developers must address when creating AI systems, and how to implement ethical frameworks...</p>
-                    <a href="#" class="btn-secondary">Read Article</a>
-                </div>
-            </div>
-            
-            <div class="blog-card" data-aos="zoom-in" data-aos-delay="200">
-                <div class="blog-image">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" alt="Web Performance">
-                    <div class="blog-category">Web Development</div>
-                </div>
-                <div class="blog-content">
-                    <h3>Optimizing Web Performance for East African Markets</h3>
-                    <p class="blog-meta">
-                        <span><i class="far fa-calendar"></i> February 28, 2024</span>
-                        <span><i class="far fa-clock"></i> 7 min read</span>
-                    </p>
-                    <p class="blog-excerpt">Strategies for developing high-performance websites that work well in regions with bandwidth constraints and varied device capabilities...</p>
-                    <a href="#" class="btn-secondary">Read Article</a>
-                </div>
-            </div>
-            
-            <div class="blog-card" data-aos="zoom-in" data-aos-delay="300">
-                <div class="blog-image">
-                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=250&fit=crop" alt="Mobile Development">
-                    <div class="blog-category">Mobile Development</div>
-                </div>
-                <div class="blog-content">
-                    <h3>Creating Inclusive Mobile Apps for Diverse Users</h3>
-                    <p class="blog-meta">
-                        <span><i class="far fa-calendar"></i> January 10, 2024</span>
-                        <span><i class="far fa-clock"></i> 6 min read</span>
-                    </p>
-                    <p class="blog-excerpt">Best practices for designing and developing mobile applications that cater to users with different abilities, languages, and technical proficiency...</p>
-                    <a href="#" class="btn-secondary">Read Article</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="cta-container">
-            <a href="#" class="btn-primary">View All Articles</a>
-        </div>
-    </div>
-</section>
+            <a class="nav-cta" href="#contact">Hire Me</a>
+        </nav>
 
-<!-- Testimonials Section -->
-<section id="testimonials" class="section" data-aos="fade-up">
-    <div class="glass-card">
-        <h2>Testimonials</h2>
-        <div class="testimonial-container">
-            <div class="testimonial-controls">
-                <button id="prev-testimonial" class="testimonial-control"><i class="fas fa-chevron-left"></i></button>
-                <button id="next-testimonial" class="testimonial-control"><i class="fas fa-chevron-right"></i></button>
-            </div>
-            
-            <div class="testimonials-wrapper">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-item active">
-                    <div class="testimonial-content">
-                        <div class="testimonial-text">
-                            <i class="fas fa-quote-left"></i>
-                            <p>Micheal is an exceptional developer with deep technical knowledge and problem-solving skills. His work on our student management system exceeded expectations and demonstrated a keen attention to detail.</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="testimonial-author-img">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" alt="Dr. James Muhumuza">
-                            </div>
-                            <div class="testimonial-author-info">
-                                <h4>Dr. James Muhumuza</h4>
-                                <p>Professor, MUST</p>
-                            </div>
-                        </div>
-                    </div>
+        <section class="hero container reveal">
+            <div class="hero-copy">
+                <p class="kicker">Software Developer | AI and Web Systems</p>
+                <h1>Building practical digital products with clean engineering and measurable impact.</h1>
+                <p class="hero-sub">
+                    I am a Computer Science student at Mbarara University of Science and Technology building
+                    robust web apps, AI-assisted platforms, and mobile-first tools for real users.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#projects">View Projects</a>
+                    <a class="btn btn-secondary" href="#contact">Start a Project</a>
                 </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="testimonial-item">
-                    <div class="testimonial-content">
-                        <div class="testimonial-text">
-                            <i class="fas fa-quote-left"></i>
-                            <p>Working with Micheal on the electronic voting system was a pleasure. His expertise in security implementations and database design was crucial to the project's success. Highly recommended!</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="testimonial-author-img">
-                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Sarah Nakigozi">
-                            </div>
-                            <div class="testimonial-author-info">
-                                <h4>Sarah Nakigozi</h4>
-                                <p>Project Manager, ICT Labs</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="testimonial-item">
-                    <div class="testimonial-content">
-                        <div class="testimonial-text">
-                            <i class="fas fa-quote-left"></i>
-                            <p>Micheal's contribution to our mental health chatbot project was invaluable. His deep understanding of AI and natural language processing, combined with his commitment to creating meaningful solutions, made all the difference.</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="testimonial-author-img">
-                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="Dr. Rachel Kiconco">
-                            </div>
-                            <div class="testimonial-author-info">
-                                <h4>Dr. Rachel Kiconco</h4>
-                                <p>Head of Mental Health, MRRH</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-indicators">
-                <span class="testimonial-dot active" data-index="0"></span>
-                <span class="testimonial-dot" data-index="1"></span>
-                <span class="testimonial-dot" data-index="2"></span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section (enhanced) -->
-<section id="contact" class="section" data-aos="fade-up">
-    <div class="glass-card">
-        <h2>Get In Touch</h2>
-        <div class="contact-container">
-            <!-- Direct Contact Information -->
-            <div class="direct-contact" data-aos="fade-right">
-                <h3>Contact Information</h3>
-                <ul class="contact-list">
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:amanyamicheal770@gmail.com">amanyamicheal770@gmail.com</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+256740470116">+256 740 470 116</a>
-                    </li>
-                    <li>
-                        <i class="fab fa-whatsapp"></i>
-                        <a href="https://wa.me/256740470116" target="_blank">WhatsApp Me</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Mbarara, Uganda</span>
-                    </li>
+                <ul class="meta-row">
+                    <li><i class="fa-solid fa-location-dot"></i> Mbarara, Uganda</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Available for freelance work</li>
                 </ul>
-                
-                <!-- Availability Calendar -->
-                <div class="availability-calendar">
-                    <h4>My Availability</h4>
-                    <div class="calendar-visual">
-                        <div class="calendar-legend">
-                            <span class="legend-item"><span class="legend-color available"></span> Available</span>
-                            <span class="legend-item"><span class="legend-color limited"></span> Limited</span>
-                            <span class="legend-item"><span class="legend-color booked"></span> Booked</span>
-                        </div>
-                        <div class="calendar-weeks">
-                            <div class="calendar-week">
-                                <span class="week-label">Current</span>
-                                <span class="week-availability available" data-tippy-content="Fully available this week"></span>
-                            </div>
-                            <div class="calendar-week">
-                                <span class="week-label">Next</span>
-                                <span class="week-availability limited" data-tippy-content="Limited availability (10-15 hrs)"></span>
-                            </div>
-                            <div class="calendar-week">
-                                <span class="week-label">May</span>
-                                <span class="week-availability limited" data-tippy-content="Limited availability (5-10 hrs)"></span>
-                            </div>
-                            <div class="calendar-week">
-                                <span class="week-label">June</span>
-                                <span class="week-availability available" data-tippy-content="Fully available"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class="btn-secondary btn-schedule" data-tippy-content="Schedule a meeting">Book a Consultation</a>
-                </div>
-            </div
-            
-            <!-- Contact Form -->
-            <form id="contactForm" class="contact-form" data-aos="fade-left">
-                <div class="form-group">
-                    <label for="name">Full Name*</label>
-                    <input type="text" id="name" name="name" required>
-                    <div class="form-feedback"></div>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address*</label>
-                    <input type="email" id="email" name="email" required>
-                    <div class="form-feedback"></div>
-                </div>
-                <div class="form-group">
-                    <label for="company">Company/Organization</label>
-                    <input type="text" id="company" name="company">
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject*</label>
-                    <select id="subject" name="subject" required>
-                        <option value="" disabled selected>Select a subject</option>
-                        <option value="job">Job Opportunity</option>
-                        <option value="project">Project Inquiry</option>
-                        <option value="collaboration">Collaboration</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="budget">Project Budget (USD)</label>
-                    <select id="budget" name="budget">
-                        <option value="" disabled selected>Select budget range</option>
-                        <option value="small">$500 - $1,000</option>
-                        <option value="medium">$1,000 - $5,000</option>
-                        <option value="large">$5,000+</option>
-                        <option value="discuss">To be discussed</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message*</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                    <div class="form-feedback"></div>
-                </div>
-                <div class="form-group">
-                    <div class="g-recaptcha" data-sitekey="your-recaptcha-site-key"></div>
-                </div>
-                <div class="form-policy">
-                    <input type="checkbox" id="privacy" name="privacy" required>
-                    <label for="privacy">I agree to the <a href="#">privacy policy</a> and consent to being contacted regarding my inquiry.</label>
-                </div>
-                <button type="submit" class="btn-primary">Send Message</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer data-aos="fade-up">
-    <div class="glass-card footer-card">
-        <div class="footer-content">
-            <div class="footer-branding">
-                <div class="footer-logo">
-                    <img src="images/new.jpg" alt="Micheal Amanya" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
-                </div>
-                <p>Solving complex problems with elegant solutions.</p>
             </div>
-            <div class="footer-links">
-                <div class="footer-section">
-                    <h4>Site Map</h4>
+
+            <aside class="hero-panel">
+                <img src="images/new.jpg" alt="Portrait of Micheal Amanya" class="hero-photo">
+                <div class="hero-metrics">
+                    <article>
+                        <h3>15+</h3>
+                        <p>Projects Completed</p>
+                    </article>
+                    <article>
+                        <h3>3+</h3>
+                        <p>Years Building</p>
+                    </article>
+                    <article>
+                        <h3>8+</h3>
+                        <p>Clients Supported</p>
+                    </article>
+                </div>
+            </aside>
+        </section>
+    </header>
+
+    <main>
+        <section class="section container reveal" id="about">
+            <div class="section-head">
+                <p class="kicker">About</p>
+                <h2>Focused on engineering quality, performance, and user trust.</h2>
+            </div>
+            <div class="about-grid card">
+                <p>
+                    My work blends software engineering fundamentals with AI and product thinking. I build tools
+                    that solve operations, accessibility, and communication challenges across education and health.
+                </p>
+                <p>
+                    Core strengths include backend logic, frontend architecture, and system design. I enjoy projects
+                    that require strong structure, reliability, and long-term maintainability.
+                </p>
+                <ul class="about-points">
+                    <li><strong>Education:</strong> BSc Computer Science, MUST (2023 - Present)</li>
+                    <li><strong>Languages:</strong> English, Runyankole, Luganda</li>
+                    <li><strong>Interests:</strong> AI research, Linux systems, automation</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section container reveal" id="services">
+            <div class="section-head">
+                <p class="kicker">Services</p>
+                <h2>Technical services aligned with business outcomes.</h2>
+            </div>
+            <div class="service-grid">
+                <article class="card service-card">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Responsive and secure web applications with maintainable frontend and backend code.</p>
+                </article>
+                <article class="card service-card">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h3>Mobile Apps</h3>
+                    <p>Cross-platform mobile experiences with practical workflows and thoughtful UI behavior.</p>
+                </article>
+                <article class="card service-card">
+                    <i class="fa-solid fa-brain"></i>
+                    <h3>AI Solutions</h3>
+                    <p>Applied machine learning and NLP features that improve decision quality and productivity.</p>
+                </article>
+                <article class="card service-card">
+                    <i class="fa-solid fa-database"></i>
+                    <h3>Database Architecture</h3>
+                    <p>Scalable data models and optimized queries for dependable application performance.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal" id="skills">
+            <div class="section-head">
+                <p class="kicker">Skills</p>
+                <h2>Modern stack with strong fundamentals.</h2>
+            </div>
+            <div class="skills-grid">
+                <article class="card skill"><h3>Python</h3><p>Advanced</p></article>
+                <article class="card skill"><h3>Django</h3><p>Advanced</p></article>
+                <article class="card skill"><h3>JavaScript</h3><p>Intermediate</p></article>
+                <article class="card skill"><h3>HTML and CSS</h3><p>Advanced</p></article>
+                <article class="card skill"><h3>Java</h3><p>Intermediate</p></article>
+                <article class="card skill"><h3>MySQL</h3><p>Intermediate</p></article>
+            </div>
+        </section>
+
+        <section class="section container reveal" id="projects">
+            <div class="section-head">
+                <p class="kicker">Projects</p>
+                <h2>Selected work from web, AI, and product systems.</h2>
+            </div>
+            <div class="project-grid">
+                <article class="card project-card">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=520&fit=crop" alt="Student Management System dashboard preview">
+                    <div>
+                        <h3>Student Management System</h3>
+                        <p>Django-based platform for enrollment, records, and institutional reporting workflows.</p>
+                        <div class="tags"><span>Django</span><span>REST API</span><span>PostgreSQL</span></div>
+                        <a class="text-link" href="https://github.com/michealamanya/student-management-system-in-django" target="_blank" rel="noopener noreferrer">View Repository</a>
+                    </div>
+                </article>
+
+                <article class="card project-card">
+                    <img src="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=800&h=520&fit=crop" alt="Electronic voting system interface">
+                    <div>
+                        <h3>Electronic Voting System</h3>
+                        <p>Secure voting workflow with auditability and clear user flows for institutional elections.</p>
+                        <div class="tags"><span>PHP</span><span>MySQL</span><span>Security</span></div>
+                        <a class="text-link" href="https://github.com/michealamanya/evoting" target="_blank" rel="noopener noreferrer">View Repository</a>
+                    </div>
+                </article>
+
+                <article class="card project-card">
+                    <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?w=800&h=520&fit=crop" alt="Mental health chatbot interface mockup">
+                    <div>
+                        <h3>Mental Health Chatbot</h3>
+                        <p>NLP-driven chatbot concept to support anonymous and accessible first-line engagement.</p>
+                        <div class="tags"><span>AI</span><span>NLP</span><span>Flutter</span></div>
+                        <a class="text-link" href="https://github.com/michealamanya/mindmate" target="_blank" rel="noopener noreferrer">View Repository</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal" id="timeline">
+            <div class="section-head">
+                <p class="kicker">Journey</p>
+                <h2>Professional timeline.</h2>
+            </div>
+            <div class="timeline card">
+                <article>
+                    <p class="time">2023 - Present</p>
+                    <h3>Computer Science Student, MUST</h3>
+                    <p>Focused on software engineering, AI, and systems thinking.</p>
+                </article>
+                <article>
+                    <p class="time">2022 - 2023</p>
+                    <h3>Freelance Developer</h3>
+                    <p>Delivered websites and software tools for local businesses and organizations.</p>
+                </article>
+                <article>
+                    <p class="time">2022</p>
+                    <h3>UACE Completion</h3>
+                    <p>Completed advanced secondary studies with a science-focused pathway.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal" id="contact">
+            <div class="section-head">
+                <p class="kicker">Contact</p>
+                <h2>Let us build something excellent together.</h2>
+            </div>
+            <div class="contact-grid">
+                <article class="card contact-info">
+                    <h3>Reach me directly</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:amanyamicheal770@gmail.com">amanyamicheal770@gmail.com</a></li>
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:+256740470116">+256 740 470 116</a></li>
+                        <li><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/256740470116" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                        <li><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/amanya-micheal-778a9234a" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><i class="fa-brands fa-github"></i> <a href="https://github.com/michealamanya" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                     </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Social</h4>
-                    <div class="social-links">
-                        <a href="https://github.com/michealamanya" target="_blank" data-tippy-content="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/amanya-micheal-778a9234a" target="_blank" data-tippy-content="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://twitter.com/@amanyamicheal_a" target="_blank" data-tippy-content="Twitter"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
+                </article>
+
+                <form class="card contact-form" id="contact-form">
+                    <h3>Project inquiry</h3>
+                    <label for="name">Full Name</label>
+                    <input id="name" name="name" type="text" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required>
+
+                    <label for="message">What do you need built?</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button class="btn btn-primary" type="submit">Send Message</button>
+                    <p class="form-note" id="form-note" aria-live="polite"></p>
+                </form>
             </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-wrap">
+            <p>© 2026 Micheal Amanya. Built with intent and discipline.</p>
+            <a href="#home" class="text-link">Back to top</a>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Micheal Amanya. All rights reserved.</p>
-            <p class="footer-credits">Crafted with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> in Uganda</p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
-<!-- Back to top button -->
-<div id="back-to-top" data-tippy-content="Back to top">
-    <i class="fas fa-arrow-up"></i>
-</div>
+    <button class="floating-top" id="floating-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
-<!-- Print Button -->
-<div id="print-portfolio" data-tippy-content="Print portfolio">
-    <i class="fas fa-print"></i>
-</div>
-
-<!-- JS Libraries -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
-<script src="https://unpkg.com/@popperjs/core@2"></script>
-<script src="https://unpkg.com/tippy.js@6"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/simplebar@5.3.6/dist/simplebar.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/github-calendar@2.3.1/dist/github-calendar.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script src="js/script.js"></script>
-
-<!-- Initialize new UI components -->
-<script>
-    // Initialize AOS animations
-    document.addEventListener('DOMContentLoaded', function() {
-        // Preloader
-        setTimeout(() => {
-            document.getElementById('preloader').style.opacity = '0';
-            setTimeout(() => {
-                document.getElementById('preloader').style.display = 'none';
-            }, 500);
-        }, 1500);
-        
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false
-        });
-        
-        // Initialize tooltips
-        tippy('[data-tippy-content]', {
-            placement: 'top',
-            animation: 'scale',
-            theme: 'light'
-        });
-        
-        // Back to top button
-        const backToTopButton = document.getElementById('back-to-top');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.classList.add('show');
-            } else {
-                backToTopButton.classList.remove('show');
-            }
-        });
-        
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Initialize typing effect
-        const typingOptions = {
-            strings: [
-                'Computer Science Student', 
-                'Web Developer', 
-                'AI Enthusiast', 
-                'Mobile App Developer',
-                'Problem Solver',
-                'Tech Innovator'
-            ],
-            typeSpeed: 50,
-            backSpeed: 30,
-            backDelay: 1500,
-            loop: true
-        };
-        
-        new Typed('#typing-text', typingOptions);
-        
-        // Professional Stats Counter Animation
-        const statNumbers = document.querySelectorAll('.stat-number');
-        
-        const animateStats = () => {
-            statNumbers.forEach(stat => {
-                const target = parseInt(stat.getAttribute('data-count'));
-                const count = +stat.innerText;
-                const speed = 200; // Lower is faster
-                const inc = target / speed;
-                
-                if (count < target) {
-                    stat.innerText = Math.ceil(count + inc);
-                    setTimeout(animateStats, 30);
-                } else {
-                    stat.innerText = target;
-                }
-            });
-        };
-        
-        // Start animation when stats are in viewport
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateStats();
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        });
-        
-        document.querySelector('.professional-stats')?.forEach(stats => {
-            statsObserver.observe(stats);
-        });
-        
-        // Print button functionality
-        const printButton = document.getElementById('print-portfolio');
-        if (printButton) {
-            printButton.addEventListener('click', () => {
-                window.print();
-            });
-        }
-        
-        // Initialize GLightbox for project images
-        const lightbox = GLightbox({
-            selector: '.glightbox',
-            touchNavigation: true,
-            loop: true,
-            autoplayVideos: true
-        });
-        
-        // Project Filtering
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
-        
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
-                
-                const filter = button.getAttribute('data-filter');
-                
-                projectCards.forEach(card => {
-                    if (filter === 'all') {
-                        card.style.display = 'flex';
-                        setTimeout(() => {
-                            card.classList.remove('hide');
-                        }, 300);
-                    } else {
-                        if (card.getAttribute('data-category').includes(filter)) {
-                            card.style.display = 'flex';
-                            setTimeout(() => {
-                                card.classList.remove('hide');
-                            }, 300);
-                        } else {
-                            card.classList.add('hide');
-                            setTimeout(() => {
-                                card.style.display = 'none';
-                            }, 300);
-                        }
-                    }
-                });
-            });
-        });
-        
-        // Initialize skill progress bars
-        const skillBars = document.querySelectorAll('.skill-progress');
-        skillBars.forEach(bar => {
-            const percent = bar.getAttribute('data-percent');
-            bar.style.width = '0%';
-            
-            // Animate when in viewport
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
-                            bar.style.width = percent + '%';
-                        }, 200);
-                        observer.unobserve(entry.target);
-                    }
-                });
-            });
-            
-            observer.observe(bar);
-        });
-        
-        // Testimonial Slider
-        const testimonials = document.querySelectorAll('.testimonial-item');
-        const prevBtn = document.getElementById('prev-testimonial');
-        const nextBtn = document.getElementById('next-testimonial');
-        const dots = document.querySelectorAll('.testimonial-dot');
-        let currentTestimonial = 0;
-        
-        function showTestimonial(index) {
-            testimonials.forEach(testimonial => testimonial.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            
-            testimonials[index].classList.add('active');
-            dots[index].classList.add('active');
-            currentTestimonial = index;
-        }
-        
-        prevBtn.addEventListener('click', () => {
-            currentTestimonial = (currentTestimonial === 0) ? testimonials.length - 1 : currentTestimonial - 1;
-            showTestimonial(currentTestimonial);
-        });
-        
-        nextBtn.addEventListener('click', () => {
-            currentTestimonial = (currentTestimonial === testimonials.length - 1) ? 0 : currentTestimonial + 1;
-            showTestimonial(currentTestimonial);
-        });
-        
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                const index = parseInt(dot.getAttribute('data-index'));
-                showTestimonial(index);
-            });
-        });
-        
-        // Auto rotate testimonials
-        setInterval(() => {
-            currentTestimonial = (currentTestimonial === testimonials.length - 1) ? 0 : currentTestimonial + 1;
-            showTestimonial(currentTestimonial);
-        }, 6000);
-        
-        // Fetch GitHub Data
-        async function fetchGitHubData() {
-            try {
-                // Replace with your GitHub username
-                const username = 'michealamanya';
-                const response = await fetch(`https://api.github.com/users/${username}`);
-                const data = await response.json();
-                
-                if (data) {
-                    document.getElementById('gh-repos').textContent = data.public_repos || '0';
-                    
-                    // Additional API calls for more detailed info
-                    // These would need to be replaced with actual GitHub API endpoints
-                    // and might require authentication for higher rate limits
-                    document.getElementById('gh-stars').textContent = '15'; // Placeholder
-                    document.getElementById('gh-commits').textContent = '257'; // Placeholder
-                    
-                    // Initialize GitHub calendar
-                    if (typeof GitHubCalendar !== 'undefined') {
-                        GitHubCalendar(".github-calendar", username, { responsive: true });
-                    }
-                }
-            } catch (error) {
-                console.error("Error fetching GitHub data:", error);
-            }
-        }
-        
-        fetchGitHubData();
-        
-        // Enhanced Contact Form with confetti and reCAPTCHA
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Basic validation
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const subject = document.getElementById('subject').value;
-                const message = document.getElementById('message').value;
-                const privacy = document.getElementById('privacy').checked;
-                
-                if (!name || !email || !subject || !message || !privacy) {
-                    Swal.fire({
-                        title: 'Error!',
-                        text: 'Please fill in all required fields and accept the privacy policy',
-                        icon: 'error',
-                        confirmButtonText: 'OK'
-                    });
-                    return;
-                }
-                
-                // Check reCAPTCHA
-                const recaptchaResponse = grecaptcha.getResponse();
-                if (!recaptchaResponse.length) {
-                    Swal.fire({
-                        title: 'Verification Required',
-                        text: 'Please complete the reCAPTCHA verification',
-                        icon: 'warning',
-                        confirmButtonText: 'OK'
-                    });
-                    return;
-                }
-                
-                // Show sending message
-                Swal.fire({
-                    title: 'Sending...',
-                    text: 'Please wait while we send your message',
-                    allowOutsideClick: false,
-                    didOpen: () => {
-                        Swal.showLoading();
-                    }
-                });
-                
-                // Simulate sending (replace with actual API call)
-                setTimeout(() => {
-                    Swal.fire({
-                        title: 'Message Sent!',
-                        text: 'Thank you for contacting me. I will get back to you within 24-48 hours!',
-                        icon: 'success',
-                        confirmButtonText: 'Great!'
-                    });
-                    
-                    // Trigger confetti
-                    confetti({
-                        particleCount: 100,
-                        spread: 70,
-                        origin: { y: 0.6 }
-                    });
-                    
-                    contactForm.reset();
-                    grecaptcha.reset();
-                }, 2000);
-            });
-        }
-        
-        // Availability Status update based on time
-        const updateAvailabilityStatus = () => {
-            const now = new Date();
-            const day = now.getDay(); // 0 = Sunday, 6 = Saturday
-            const hour = now.getHours();
-            
-            const availabilityBadge = document.getElementById('availability-status');
-            
-            if (!availabilityBadge) return;
-            
-            // Available during weekdays 9am-5pm
-            if (day >= 1 && day <= 5 && hour >= 9 && hour < 17) {
-                availabilityBadge.innerHTML = '<span class="pulse-dot"></span> Available now';
-                availabilityBadge.className = 'availability-badge available';
-            } 
-            // Limited availability on weekends and evenings
-            else if ((day >= 1 && day <= 5 && (hour >= 17 || hour < 9)) || (day === 0 || day === 6)) {
-                availabilityBadge.innerHTML = '<span class="pulse-dot"></span> Limited availability';
-                availabilityBadge.className = 'availability-badge limited';
-            }
-        };
-        
-        updateAvailabilityStatus();
-        setInterval(updateAvailabilityStatus, 60000); // Update every minute
-        
-        // Project Demo Links
-        const demoButtons = document.querySelectorAll('.btn-demo');
-        demoButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const project = this.getAttribute('data-project');
-                
-                let title, description;
-                
-                switch (project) {
-                    case 'student-system':
-                        title = 'Student Management System';
-                        description = 'This is a live demo of my student management system. Currently, the demo is being prepared. Please check back soon!';
-                        break;
-                    case 'evoting':
-                        title = 'Electronic Voting System';
-                        description = 'The e-voting system demo is currently under maintenance. It will be available shortly!';
-                        break;
-                    case 'chatbot':
-                        title = 'Mental Health Chatbot';
-                        description = 'The chatbot demo requires special permissions. Please contact me for a private demo!';
-                        break;
-                    default:
-                        title = 'Project Demo';
-                        description = 'Demo coming soon!';
-                }
-                
-                Swal.fire({
-                    title: title,
-                    text: description,
-                    icon: 'info',
-                    confirmButtonText: 'OK'
-                });
-            });
-        });
-    });
-</script>
+    <script src="js/script.js"></script>
 </body>
 </html>
