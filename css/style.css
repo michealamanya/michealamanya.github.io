@@ -252,6 +252,11 @@ a {
     overflow: hidden;
     transition: transform 0.35s ease, box-shadow 0.35s ease;
     will-change: transform;
+    display: grid;
+    justify-items: center;
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 .hero-panel::after {
@@ -265,12 +270,13 @@ a {
 }
 
 .hero-photo {
-    border-radius: 14px;
+    border-radius: 50%;
     object-fit: cover;
     object-position: 50% 18%;
-    width: 100%;
-    min-height: 310px;
-    max-height: 360px;
+    width: min(320px, 82vw);
+    aspect-ratio: 1 / 1;
+    border: none;
+    box-shadow: 0 16px 34px rgba(17, 20, 24, 0.16);
     transition: transform 0.45s ease;
 }
 
