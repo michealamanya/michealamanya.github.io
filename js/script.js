@@ -1,11 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const siteNav = document.getElementById("site-nav");
     const navToggle = document.getElementById("nav-toggle");
     const navLinks = document.getElementById("nav-links");
-    const topButton = document.getElementById("floating-top");
-    const scrollProgress = document.getElementById("scroll-progress");
-    const pageAura = document.querySelector(".page-aura");
     const contactForm = document.getElementById("contact-form");
     const formNote = document.getElementById("form-note");
+    const revealItems = document.querySelectorAll(".reveal");
+    const skillFills = document.querySelectorAll(".skill-fill");
+    const tiltCards = document.querySelectorAll(".tilt-card");
+    const navAnchors = document.querySelectorAll(".nav-links a");
 
     if (navToggle && navLinks) {
         navToggle.addEventListener("click", () => {
@@ -21,123 +23,98 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    const revealObserver = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("revealed");
-                    entry.target.classList.add("is-inview");
-                    revealObserver.unobserve(entry.target);
-                }
-            });
-        },
-        { threshold: 0.16 }
-    );
+    const sections = Array.from(navAnchors)
+        .map((link) => link.getAttribute("href"))
+        .filter((href) => href && href.startsWith("#"))
+        .map((href) => document.querySelector(href))
+        .filter(Boolean);
 
-    const revealSections = document.querySelectorAll(".reveal");
-    revealSections.forEach((section, index) => {
-        section.style.setProperty("--reveal-delay", `${index * 70}ms`);
-        revealObserver.observe(section);
-    });
+    const setActiveLink = () => {
+        const threshold = window.scrollY + window.innerHeight * 0.35;
 
-    const navAnchors = document.querySelectorAll(".nav-links a");
-    const sectionIds = Array.from(navAnchors)
-        .map((a) => a.getAttribute("href"))
-        .filter((href) => href && href.startsWith("#"));
-
-    const sections = sectionIds
-        .map((id) => document.querySelector(id))
-        .filter((section) => section);
-
-    const markActiveLink = () => {
-        const scrollLine = window.scrollY + window.innerHeight * 0.3;
-
-        sections.forEach((section) => {
-            const id = section.getAttribute("id");
-            const link = document.querySelector(`.nav-links a[href="#${id}"]`);
-            if (!link) {
+        navAnchors.forEach((link) => {
+            const href = link.getAttribute("href");
+            const section = href ? document.querySelector(href) : null;
+            if (!section) {
+                link.classList.remove("active");
                 return;
             }
 
             const top = section.offsetTop;
             const bottom = top + section.offsetHeight;
-            const active = scrollLine >= top && scrollLine < bottom;
-            link.classList.toggle("active", active);
+            link.classList.toggle("active", threshold >= top && threshold < bottom);
         });
     };
 
-    const updateScrollEffects = () => {
-        markActiveLink();
-
-        const scrollTop = window.scrollY;
-        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = scrollHeight > 0 ? Math.min(scrollTop / scrollHeight, 1) : 0;
-
-        if (scrollProgress) {
-            scrollProgress.style.transform = `scaleX(${progress})`;
+    const updateNavState = () => {
+        if (siteNav) {
+            siteNav.classList.toggle("scrolled", window.scrollY > 16);
         }
-
-        if (pageAura) {
-            const driftY = Math.min(scrollTop * 0.05, 18);
-            pageAura.style.transform = `translate3d(0, ${driftY}px, 0)`;
-        }
-
-        if (topButton) {
-            if (scrollTop > 420) {
-                topButton.classList.add("visible");
-            } else {
-                topButton.classList.remove("visible");
-            }
-        }
+        setActiveLink();
     };
 
-    updateScrollEffects();
+    const revealObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
 
-    let scrolling = false;
-    window.addEventListener("scroll", () => {
-        if (scrolling) {
-            return;
+                const delay = entry.target.getAttribute("data-delay");
+                if (delay) {
+                    entry.target.style.setProperty("--reveal-delay", `${delay}ms`);
+                }
+
+                entry.target.classList.add("revealed");
+                revealObserver.unobserve(entry.target);
+            });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    revealItems.forEach((item) => {
+        revealObserver.observe(item);
+    });
+
+    const skillObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                const fill = entry.target.querySelector(".skill-fill");
+                if (fill) {
+                    fill.style.width = fill.dataset.width || "0%";
+                }
+                skillObserver.unobserve(entry.target);
+            });
+        },
+        { threshold: 0.35 }
+    );
+
+    skillFills.forEach((fill) => {
+        const row = fill.closest(".skill-row");
+        if (row) {
+            skillObserver.observe(row);
         }
-
-        scrolling = true;
-        window.requestAnimationFrame(() => {
-            updateScrollEffects();
-            scrolling = false;
-        });
     });
 
     if (window.matchMedia("(hover: hover)").matches) {
-        const interactiveSurfaces = document.querySelectorAll(
-            ".hero-panel, .service-card, .skill, .project-card"
-        );
-
-        interactiveSurfaces.forEach((surface) => {
-            surface.addEventListener("mousemove", (event) => {
-                const rect = surface.getBoundingClientRect();
+        tiltCards.forEach((card) => {
+            card.addEventListener("mousemove", (event) => {
+                const rect = card.getBoundingClientRect();
                 const relativeX = (event.clientX - rect.left) / rect.width;
                 const relativeY = (event.clientY - rect.top) / rect.height;
-
                 const rotateY = (relativeX - 0.5) * 6;
                 const rotateX = (0.5 - relativeY) * 6;
 
-                surface.style.setProperty("--rx", `${rotateX}deg`);
-                surface.style.setProperty("--ry", `${rotateY}deg`);
-                surface.style.setProperty("--mx", `${relativeX * 100}%`);
-                surface.style.setProperty("--my", `${relativeY * 100}%`);
-                surface.classList.add("is-hovered");
+                card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
             });
 
-            surface.addEventListener("mouseleave", () => {
-                surface.classList.remove("is-hovered");
-                surface.style.setProperty("--rx", "0deg");
-                surface.style.setProperty("--ry", "0deg");
+            card.addEventListener("mouseleave", () => {
+                card.style.transform = "";
             });
-        });
-    }
-
-    if (topButton) {
-        topButton.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
         });
     }
 
@@ -145,9 +122,9 @@ document.addEventListener("DOMContentLoaded", () => {
         contactForm.addEventListener("submit", (event) => {
             event.preventDefault();
 
-            const name = (document.getElementById("name")?.value || "").trim();
-            const email = (document.getElementById("email")?.value || "").trim();
-            const message = (document.getElementById("message")?.value || "").trim();
+            const name = document.getElementById("name")?.value.trim() || "";
+            const email = document.getElementById("email")?.value.trim() || "";
+            const message = document.getElementById("message")?.value.trim() || "";
 
             if (!name || !email || !message) {
                 formNote.textContent = "Please complete all required fields.";
@@ -156,11 +133,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const subject = encodeURIComponent(`Project Inquiry from ${name}`);
             const body = encodeURIComponent(`${message}\n\nFrom: ${name}\nEmail: ${email}`);
-            const mailtoUrl = `mailto:amanyamicheal770@gmail.com?subject=${subject}&body=${body}`;
-
-            window.location.href = mailtoUrl;
+            window.location.href = `mailto:amanyamicheal770@gmail.com?subject=${subject}&body=${body}`;
             formNote.textContent = "Opening your email app to send the message.";
             contactForm.reset();
         });
     }
+
+    updateNavState();
+    window.addEventListener("scroll", updateNavState, { passive: true });
+    window.addEventListener("resize", updateNavState);
 });

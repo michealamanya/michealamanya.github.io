@@ -1,148 +1,120 @@
-/* Print styles for portfolio */
-
 @page {
     margin: 1cm;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: white !important;
-    color: black !important;
+    background: #ffffff !important;
+    color: #111111 !important;
+    font-family: "Inter", sans-serif;
 }
 
-.navbar, .theme-toggle, #back-to-top, #print-portfolio, .hamburger,
-.hero-cta, .social-links, .testimonial-controls, .btn-secondary,
-.availability-badge, .project-filter, .footer {
+.background-glow,
+.nav-toggle,
+.nav-cta,
+.hero-actions,
+.contact-form,
+script {
     display: none !important;
 }
 
-.glass-card {
-    background: white !important;
+.site-nav,
+.hero-pill,
+.surface-card,
+.service-card,
+.project-card,
+.contact-link,
+.hero-image-frame {
+    background: #ffffff !important;
     box-shadow: none !important;
-    margin: 20px 0 !important;
-    padding: 15px 0 !important;
-    page-break-inside: avoid;
+    border: 1px solid #d8d8d8 !important;
+}
+
+.site-nav {
+    position: static !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+.nav-links {
+    display: flex !important;
+    margin-left: auto;
 }
 
 .section {
-    padding: 20px 0 !important;
+    padding: 1.5rem 0 0 !important;
 }
 
-h1, h2, h3, h4 {
-    color: #333 !important;
-    page-break-after: avoid;
+.hero,
+.site-footer {
+    padding-top: 0 !important;
 }
 
-h2 {
-    margin-top: 20px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
+.hero-grid,
+.about-grid,
+.services-grid,
+.skills-list,
+.project-card,
+.contact-grid,
+.footer-inner,
+.stats-grid {
+    display: block !important;
 }
 
-.highlight {
-    color: #0088ff !important;
+.hero-title,
+.section-intro h2,
+.project-copy h3,
+.timeline-item h3,
+.stat-card h2,
+.brand-name,
+h1,
+h2,
+h3 {
+    color: #111111 !important;
 }
 
-p, li {
-    color: #333 !important;
-    font-size: 12pt;
+.hero-subtitle,
+.about-copy,
+.project-copy p,
+.timeline-item p,
+.section-lede,
+.form-note,
+.stat-card p,
+.contact-link span:last-child,
+.surface-card p {
+    color: #444444 !important;
 }
 
-a {
-    color: #0088ff !important;
-    text-decoration: none;
+.text-gradient,
+.shimmer-text,
+.stat-card h2 {
+    color: #111111 !important;
+    background: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
 }
 
-/* Specific section modifications */
-
-.hero-card {
-    text-align: center;
+.project-card,
+.surface-card,
+.service-card,
+.timeline-item,
+.contact-link {
+    page-break-inside: avoid;
+    margin-bottom: 1rem;
 }
 
-.typing-cursor {
-    display: none;
+.project-media img,
+.hero-image {
+    max-height: 12rem;
+    object-fit: cover;
 }
 
-.about-content {
-    flex-direction: column;
-}
-
-.about-text {
-    width: 100% !important;
-}
-
-.skills-grid {
-    grid-template-columns: repeat(4, 1fr) !important;
-}
-
-.skill-card {
-    padding: 10px !important;
-}
-
-.cv-section {
-    margin-bottom: 15px;
-}
-
-.projects-grid {
-    grid-template-columns: 1fr !important;
-}
-
-.project-card {
-    margin-bottom: 20px;
-    padding: 0 !important;
-}
-
-.project-info p {
-    font-size: 10pt;
-}
-
-.project-tags {
-    margin: 5px 0;
-}
-
-.tag {
-    font-size: 9pt;
-    padding: 2px 8px;
-    margin: 2px;
-}
-
-.contact-container {
-    flex-direction: column;
-}
-
-.contact-form {
-    display: none;
-}
-
-/* Print-specific header */
-body::before {
-    content: "Micheal Amanya - Professional Portfolio";
-    display: block;
-    text-align: center;
-    font-size: 18pt;
-    font-weight: bold;
-    margin: 20px 0;
-    color: #0088ff !important;
-}
-
-/* Print-specific footer */
 body::after {
-    content: "Printed from michealamanya.github.io • Contact: amanyamicheal770@gmail.com • +256 740 470 116";
+    content: "Printed from michealamanya.github.io | Contact: amanyamicheal770@gmail.com | +256 740 470 116";
     display: block;
-    text-align: center;
+    margin-top: 2rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #d8d8d8;
+    color: #666666;
     font-size: 9pt;
-    margin-top: 30px;
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
-    color: #777 !important;
-}
-
-/* Fix for images */
-img {
-    max-width: 100% !important;
-}
-
-.project-img img {
-    max-height: 200px;
-    object-fit: contain;
+    text-align: center;
 }
